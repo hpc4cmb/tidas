@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Intervals &#8212; TIDAS 0.2.0.dev138
+    <title>Intervals &#8212; TIDAS 0.3.0
  documentation</title>
     
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
@@ -15,27 +15,25 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0.dev138
-',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="TIDAS 0.2.0.dev138
- documentation" href="index.html" />
     <link rel="next" title="Data Selection" href="selection.html" />
     <link rel="prev" title="Groups" href="group.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><img class="rightlogo" src="_static/tidas_logo_small.png" alt="Logo"/><h1 class="heading"><a href="index.html">
-          <span>TIDAS 0.2.0.dev138
+          <span>TIDAS 0.3.0
  documentation</span></a></h1>
         <h2 class="heading"><span>Intervals</span></h2>
       </div>
@@ -60,72 +58,71 @@
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="tidas.Intrvl">
-<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Intrvl</code><span class="sig-paren">(</span><em>start=0.0</em>, <em>stop=0.0</em>, <em>first=-1</em>, <em>last=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/ctidas.html#Intrvl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Intrvl" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Intrvl</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.Intrvl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: tidas._pytidas.Intrvl) -&gt; None</li>
+<li>__init__(self: tidas._pytidas.Intrvl, arg0: float, arg1: float, arg2: int, arg3: int) -&gt; None</li>
+</ol>
+</dd></dl>
 
 <dl class="class">
 <dt id="tidas.Intervals">
-<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Intervals</code><span class="sig-paren">(</span><em>size=0</em>, <em>props={}</em>, <em>handle=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/intervals.html#Intervals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Intervals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which represents a TIDAS intervals object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>size</strong> (<em>long</em>) &#8211; size of the list of intervals.</li>
-<li><strong>props</strong> (<em>dict</em>) &#8211; (optional) a dictionary of properties to associate
-with the group.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Intervals</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.Intervals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: tidas._pytidas.Intervals) -&gt; None</li>
+<li>__init__(self: tidas._pytidas.Intervals, arg0: tidas._pytidas.Dictionary, arg1: int) -&gt; None</li>
+</ol>
 <dl class="method">
-<dt id="tidas.Intervals.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/intervals.html#Intervals.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Intervals.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Explicitly close the intervals (free the underlying C++ pointer).</p>
-</dd></dl>
+<dt id="tidas.Intervals.dictionary">
+<code class="descname">dictionary</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Intervals</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Dictionary<a class="headerlink" href="#tidas.Intervals.dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="attribute">
-<dt id="tidas.Intervals.props">
-<code class="descname">props</code><a class="headerlink" href="#tidas.Intervals.props" title="Permalink to this definition">¶</a></dt>
-<dd><p>The dictionary of properties set at construction time.</p>
-</dd></dl>
+<dl class="method">
+<dt id="tidas.Intervals.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Intervals</em>, <em>arg0: std::ostream</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Intervals.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Intervals.read">
-<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/intervals.html#Intervals.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Intervals.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read the list of intervals.</p>
-<p>This reads the underlying intervals data and returns the results as
-a simple Python class with data members for start / stop times and
-first / last samples.</p>
-<dl class="docutils">
-<dt>Returns (list):</dt>
-<dd>a list of Intrvl objects.</dd>
-</dl>
-</dd></dl>
+<code class="descname">read</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Intervals</em><span class="sig-paren">)</span> &#x2192; List[tidas._pytidas.Intrvl]<a class="headerlink" href="#tidas.Intervals.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
+<dt id="tidas.Intervals.seek">
+<code class="descname">seek</code><span class="sig-paren">(</span><em>arg0: List[tidas._pytidas.Intrvl], arg1: float</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Intrvl<a class="headerlink" href="#tidas.Intervals.seek" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.Intervals.seek_ceil">
+<code class="descname">seek_ceil</code><span class="sig-paren">(</span><em>arg0: List[tidas._pytidas.Intrvl], arg1: float</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Intrvl<a class="headerlink" href="#tidas.Intervals.seek_ceil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.Intervals.seek_floor">
+<code class="descname">seek_floor</code><span class="sig-paren">(</span><em>arg0: List[tidas._pytidas.Intrvl], arg1: float</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Intrvl<a class="headerlink" href="#tidas.Intervals.seek_floor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="tidas.Intervals.size">
-<code class="descname">size</code><a class="headerlink" href="#tidas.Intervals.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of intervals.</p>
-</dd></dl>
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Intervals</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tidas.Intervals.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.Intervals.total_samples">
+<code class="descname">total_samples</code><span class="sig-paren">(</span><em>arg0: List[tidas._pytidas.Intrvl]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tidas.Intervals.total_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.Intervals.total_time">
+<code class="descname">total_time</code><span class="sig-paren">(</span><em>arg0: List[tidas._pytidas.Intrvl]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#tidas.Intervals.total_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Intervals.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/intervals.html#Intervals.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Intervals.write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write the list of intervals.</p>
-<p>Takes a list of Intrvl objects and passes them to the underlying C++
-code for writing.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em>) &#8211; a list of Intrvl objects.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">write</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Intervals, arg0: List[tidas._pytidas.Intrvl]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Intervals.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -134,47 +131,47 @@ code for writing.</p>
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="_CPPv2N5tidas6intrvlE">
-<span id="tidas::intrvl"></span><span class="target" id="TIDASclasstidas_1_1intrvl"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">intrvl</code><a class="headerlink" href="#_CPPv2N5tidas6intrvlE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl"></span><span class="target" id="classtidas_1_1intrvl"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">intrvl</code><a class="headerlink" href="#_CPPv2N5tidas6intrvlE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>intrvl class. </p>
 <p>This represents a single span of time and their sample indices for a particular group. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas6intrvl6intrvlEv">
-<span id="tidas::intrvl::intrvl"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1ab4beaaa795c439fcd3a74679cf8879c0"></span><code class="descname">intrvl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas6intrvl6intrvlEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::intrvl"></span><span class="target" id="classtidas_1_1intrvl_1ab4beaaa795c439fcd3a74679cf8879c0"></span><code class="descname">intrvl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas6intrvl6intrvlEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas6intrvl6intrvlE9time_type9time_type10index_type10index_type">
-<span id="tidas::intrvl::intrvl__time_type.time_type.index_type.index_type"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1acf7a6c85556d9a8bb86e48bc23f279cc"></span><code class="descname">intrvl</code><span class="sig-paren">(</span>time_type <em>new_start</em>, time_type <em>new_stop</em>, index_type <em>new_first</em>, index_type <em>new_last</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas6intrvl6intrvlE9time_type9time_type10index_type10index_type" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::intrvl__time_type.time_type.index_type.index_type"></span><span class="target" id="classtidas_1_1intrvl_1acf7a6c85556d9a8bb86e48bc23f279cc"></span><code class="descname">intrvl</code><span class="sig-paren">(</span>time_type <em>new_start</em>, time_type <em>new_stop</em>, index_type <em>new_first</em>, index_type <em>new_last</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas6intrvl6intrvlE9time_type9time_type10index_type10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Constructor specifying the start and stop times and the first and last indices. </p>
 </dd></dl>
 
 </div>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N5tidas6intrvl5startE">
-<span id="tidas::intrvl::start__time_type"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1ab843a2e92ceee03fbccde91a6894ab91"></span>time_type <code class="descname">start</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl5startE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::start__time_type"></span><span class="target" id="classtidas_1_1intrvl_1ab843a2e92ceee03fbccde91a6894ab91"></span>time_type <code class="descname">start</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl5startE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Start time of the interval. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N5tidas6intrvl4stopE">
-<span id="tidas::intrvl::stop__time_type"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1a99abe167621ae0d170afc5e90e6f443e"></span>time_type <code class="descname">stop</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl4stopE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::stop__time_type"></span><span class="target" id="classtidas_1_1intrvl_1a99abe167621ae0d170afc5e90e6f443e"></span>time_type <code class="descname">stop</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl4stopE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Stop time of the interval. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N5tidas6intrvl5firstE">
-<span id="tidas::intrvl::first__index_type"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1aabde5ee0bb1412db145a7455d02fc099"></span>index_type <code class="descname">first</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl5firstE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::first__index_type"></span><span class="target" id="classtidas_1_1intrvl_1aabde5ee0bb1412db145a7455d02fc099"></span>index_type <code class="descname">first</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl5firstE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>First sample index in the interval. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N5tidas6intrvl4lastE">
-<span id="tidas::intrvl::last__index_type"></span><span class="target" id="TIDASclasstidas_1_1intrvl_1aaab938582e1a99f0c6d70004290117e8"></span>index_type <code class="descname">last</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl4lastE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intrvl::last__index_type"></span><span class="target" id="classtidas_1_1intrvl_1aaab938582e1a99f0c6d70004290117e8"></span>index_type <code class="descname">last</code><a class="headerlink" href="#_CPPv2N5tidas6intrvl4lastE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Last sample index in the interval. </p>
 </dd></dl>
 
@@ -183,233 +180,169 @@ code for writing.</p>
 
 <dl class="class">
 <dt id="_CPPv2N5tidas9intervalsE">
-<span id="tidas::intervals"></span><span class="target" id="TIDASclasstidas_1_1intervals"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">intervals</code><a class="headerlink" href="#_CPPv2N5tidas9intervalsE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals"></span><span class="target" id="classtidas_1_1intervals"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">intervals</code><a class="headerlink" href="#_CPPv2N5tidas9intervalsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An intervals object represents a list of disjoint spans of time. </p>
 <p>Although each interval has both a time range and a sample range, those sample indices are only meaningful in the context of a particular group. An intervals object has an optional dictionary associated with it at construction time. Some public methods are only used internally and are not needed for normal use of the object. These are labelled &#8220;internal&#8221;. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9intervalsEv">
-<span id="tidas::intervals::intervals"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a43661ca5a195456e89858aa55d6dfdc0"></span><code class="descname">intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::intervals"></span><span class="target" id="classtidas_1_1intervals_1a43661ca5a195456e89858aa55d6dfdc0"></span><code class="descname">intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default constructor. The backend is set to be memory based. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9intervalsER4dictR6size_t">
-<span id="tidas::intervals::intervals__dictCR.sCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1ab724d0b919454badfabc832257ad084f"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>d</em>, size_t <em class="property">const</em> &amp;<em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER4dictR6size_t" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::intervals__dictCR.sCR"></span><span class="target" id="classtidas_1_1intervals_1ab724d0b919454badfabc832257ad084f"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>d</em>, size_t <em class="property">const</em> &amp;<em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER4dictR6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Constructor with specified size and dictionary. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervalsD0Ev">
-<span id="tidas::intervals::~intervals"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a5eb76b6a8260672ba9241a9f91c518c1"></span><code class="descname">~intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervalsD0Ev" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::~intervals"></span><span class="target" id="classtidas_1_1intervals_1a5eb76b6a8260672ba9241a9f91c518c1"></span><code class="descname">~intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervalsD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervalsaSER9intervals">
-<span id="tidas::intervals::assign-operator__intervalsCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a2eb9f3975107037978c3a91ef93bf457"></span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervalsaSER9intervals" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::assign-operator__intervalsCR"></span><span class="target" id="classtidas_1_1intervals_1a2eb9f3975107037978c3a91ef93bf457"></span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervalsaSER9intervals" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Assignment operator. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9intervalsER9intervals">
-<span id="tidas::intervals::intervals__intervalsCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1abe549f8014fe7b830105bffa3fd368fb"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervals9intervalsEv" title="tidas::intervals::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER9intervals" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::intervals__intervalsCR"></span><span class="target" id="classtidas_1_1intervals_1abe549f8014fe7b830105bffa3fd368fb"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervals9intervalsEv" title="tidas::intervals::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER9intervals" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9intervalsER12backend_path">
-<span id="tidas::intervals::intervals__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a85d2ed7875f85aeb8a2f15765b1b3714"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::intervals__backend_pathCR"></span><span class="target" id="classtidas_1_1intervals_1a85d2ed7875f85aeb8a2f15765b1b3714"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Load the intervals from the specified location. </p>
 <p>All meta data operations will apply to this location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9intervalsER9intervalsRNSt6stringER12backend_path">
-<span id="tidas::intervals::intervals__intervalsCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1accf39d3f3685d443ca913ac0c0d2f4c9"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervals9intervalsEv" title="tidas::intervals::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER9intervalsRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::intervals__intervalsCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1intervals_1accf39d3f3685d443ca913ac0c0d2f4c9"></span><code class="descname">intervals</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervals9intervalsEv" title="tidas::intervals::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9intervalsER9intervalsRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy from an existing intervals instance. </p>
 <p>Apply an optional filter to elements and relocate to a new location. If a filter is given, a new location must be specified. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals8relocateER12backend_path">
-<span id="tidas::intervals::relocate__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1aecec7ea73eca8e44793d4ca166f08224"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals8relocateER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::relocate__backend_pathCR"></span><span class="target" id="classtidas_1_1intervals_1aecec7ea73eca8e44793d4ca166f08224"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals8relocateER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Change the location of the intervals. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals4syncEv">
-<span id="tidas::intervals::sync"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a11392dc787c1bf89e89ed92ceb3da4f9"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4syncEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::sync"></span><span class="target" id="classtidas_1_1intervals_1a11392dc787c1bf89e89ed92ceb3da4f9"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4syncEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Reload metadata from the current location, overwriting the current state in memory. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals5flushEv">
-<span id="tidas::intervals::flush"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a69be5a8b24e8dd4dac5b06d06e3055de"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals5flushEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals5flushEv">
+<span id="tidas::intervals::flushC"></span><span class="target" id="classtidas_1_1intervals_1afa904bddcc228c18d797cc100e7aa4e0"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals5flushEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Write metadata to the current location, overwriting the information at that location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals4copyER9intervalsRNSt6stringER12backend_path">
-<span id="tidas::intervals::copy__intervalsCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a994af482fc842709335f3ebd507de214"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4copyER9intervalsRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::copy__intervalsCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1intervals_1a994af482fc842709335f3ebd507de214"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4copyER9intervalsRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy with optional selection and relocation. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals4linkER9link_typeRNSt6stringE">
-<span id="tidas::intervals::link__link_typeCR.ssCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1add9fe7488b84105e289efd4dedaaa714"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals4linkER9link_typeRNSt6stringE">
+<span id="tidas::intervals::link__link_typeCR.ssCRC"></span><span class="target" id="classtidas_1_1intervals_1adfa46a7ac99664b71aeb8e631ab98a06"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Create a link at the specified location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals4wipeEv">
-<span id="tidas::intervals::wipe"></span><span class="target" id="TIDASclasstidas_1_1intervals_1aac8c7dd44bbff7a2540ce950079badae"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals4wipeEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals4wipeEv">
+<span id="tidas::intervals::wipeC"></span><span class="target" id="classtidas_1_1intervals_1a7098158c8cd6999358b60d23057d1718"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals4wipeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Delete the on-disk data and metadata associated with this object. </p>
 <p>In-memory metadata is not modified. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals8locationEv">
-<span id="tidas::intervals::location"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a8e32f52e6ecddf5fecb5bb1d9b531397"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals8locationEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals8locationEv">
+<span id="tidas::intervals::locationC"></span><span class="target" id="classtidas_1_1intervals_1a0b663e289308cbaa5ef6b22eebc54f1c"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals8locationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) The current location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals10dictionaryEv">
-<span id="tidas::intervals::dictionary"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a6002a428b4b1675a34240b4a6a2d619a"></span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<code class="descname">dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals10dictionaryEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals10dictionaryEv">
+<span id="tidas::intervals::dictionaryC"></span><span class="target" id="classtidas_1_1intervals_1aea72be10ec1f5f5220cb3f0f6acf8cc5"></span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<code class="descname">dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals10dictionaryEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A (const) reference to the dictionary specified at construction. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals4sizeEv">
-<span id="tidas::intervals::size"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a89e1237c4f84d392da3ef4d7ab0e2785"></span>size_t <code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals4sizeEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals4sizeEv">
+<span id="tidas::intervals::sizeC"></span><span class="target" id="classtidas_1_1intervals_1a120a4cfb05beaad69e7027c4ec986e26"></span>size_t <code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The number of intervals contained in this object. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas9intervals9read_dataER13interval_list">
-<span id="tidas::intervals::read_data__interval_listR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a3b54e9a4cf21cab13f4dc955cda9fdce"></span>void <code class="descname">read_data</code><span class="sig-paren">(</span>interval_list &amp;<em>intr</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas9intervals9read_dataER13interval_list" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas9intervals9read_dataER13interval_list">
+<span id="tidas::intervals::read_data__interval_listRC"></span><span class="target" id="classtidas_1_1intervals_1a8e0f3ee83821133422576838fbce9d6f"></span>void <code class="descname">read_data</code><span class="sig-paren">(</span>interval_list &amp;<em>intr</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals9read_dataER13interval_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read the list of intervals from the current location. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK5tidas9intervals9read_dataEv">
+<span id="tidas::intervals::read_dataC"></span><span class="target" id="classtidas_1_1intervals_1a14f4390e64c05f7320de73b484df706c"></span>interval_list <code class="descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals9read_dataEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read the list of intervals from the current location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals10write_dataER13interval_list">
-<span id="tidas::intervals::write_data__interval_listCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1af6873bcdd891fbefc0cdfb48e2796e9d"></span>void <code class="descname">write_data</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10write_dataER13interval_list" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::write_data__interval_listCR"></span><span class="target" id="classtidas_1_1intervals_1af6873bcdd891fbefc0cdfb48e2796e9d"></span>void <code class="descname">write_data</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10write_dataER13interval_list" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write the list of intervals to the current location. </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2NK5tidas9intervals4infoERNSt7ostreamE6size_t">
+<span id="tidas::intervals::info__osR.sC"></span><span class="target" id="classtidas_1_1intervals_1aa66c22e29279cd313dcaabbd8ee9b86d"></span>void <code class="descname">info</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em>, size_t <em>indent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas9intervals4infoERNSt7ostreamE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print information to a stream. </p>
+</dd></dl>
+
 </div>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals13total_samplesER13interval_list">
-<span id="tidas::intervals::total_samples__interval_listCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a4029eb943a34dac703e37ef7fba4fde5"></span>index_type <code class="descname">total_samples</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals13total_samplesER13interval_list" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::total_samples__interval_listCR"></span><span class="target" id="classtidas_1_1intervals_1a4029eb943a34dac703e37ef7fba4fde5"></span>index_type <code class="descname">total_samples</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals13total_samplesER13interval_list" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The total number of samples included in all intervals. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals10total_timeER13interval_list">
-<span id="tidas::intervals::total_time__interval_listCR"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a6dffc921e9033c44eef18c01fb2f3ac1"></span>time_type <code class="descname">total_time</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10total_timeER13interval_list" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::total_time__interval_listCR"></span><span class="target" id="classtidas_1_1intervals_1a6dffc921e9033c44eef18c01fb2f3ac1"></span>time_type <code class="descname">total_time</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10total_timeER13interval_list" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The total time span included in all intervals. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals4seekER13interval_list9time_type">
-<span id="tidas::intervals::seek__interval_listCR.time_type"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a68fc7c8edd468266bf83ce46dff8ea76"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4seekER13interval_list9time_type" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::seek__interval_listCR.time_type"></span><span class="target" id="classtidas_1_1intervals_1a68fc7c8edd468266bf83ce46dff8ea76"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals4seekER13interval_list9time_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the single interval that contains a specified time. </p>
 <p>If no interval contains the time, an empty interval is returned. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals9seek_ceilER13interval_list9time_type">
-<span id="tidas::intervals::seek_ceil__interval_listCR.time_type"></span><span class="target" id="TIDASclasstidas_1_1intervals_1ae40dfe1903b81ba1866a9222a7e89f74"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek_ceil</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9seek_ceilER13interval_list9time_type" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::seek_ceil__interval_listCR.time_type"></span><span class="target" id="classtidas_1_1intervals_1ae40dfe1903b81ba1866a9222a7e89f74"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek_ceil</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals9seek_ceilER13interval_list9time_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the first interval whose stop time is after the specified time. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas9intervals10seek_floorER13interval_list9time_type">
-<span id="tidas::intervals::seek_floor__interval_listCR.time_type"></span><span class="target" id="TIDASclasstidas_1_1intervals_1a2e6849837f33623ec1a2bec1219a4dce"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek_floor</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10seek_floorER13interval_list9time_type" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::intervals::seek_floor__interval_listCR.time_type"></span><span class="target" id="classtidas_1_1intervals_1a2e6849837f33623ec1a2bec1219a4dce"></span><a class="reference internal" href="#_CPPv2N5tidas6intrvlE" title="tidas::intrvl">intrvl</a> <code class="descname">seek_floor</code><span class="sig-paren">(</span>interval_list <em class="property">const</em> &amp;<em>intr</em>, time_type <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas9intervals10seek_floorER13interval_list9time_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the last interval whose start time is before the specified time. </p>
 </dd></dl>
 
 </div>
-<dl class="class">
-<dt id="_CPPv2N5tidas9intervals9IntervalsE">
-<span id="tidas::intervals::Intervals"></span><span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals"></span><em class="property">class </em><code class="descname">Intervals</code><a class="headerlink" href="#_CPPv2N5tidas9intervals9IntervalsE" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">which</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">TIDAS</span> <span class="n">intervals</span> <span class="nb">object</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">size</span> <span class="p">(</span><span class="n">long</span><span class="p">):</span>   <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">intervals</span><span class="o">.</span>
-    <span class="n">props</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span>  <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">associate</span>
-        <span class="k">with</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-<p>Inherits from object</p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="tidas.intervals.Intervals.close">
-<span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals_1a7bf5ea8e7324d9898e81aee7e9350d82"></span><code class="descname">close</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.intervals.Intervals.close" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Explicitly</span> <span class="n">close</span> <span class="n">the</span> <span class="n">intervals</span> <span class="p">(</span><span class="n">free</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span><span class="p">)</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.intervals.Intervals.props">
-<span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals_1a2400fbeb4b6a8258e18a13559c82b947"></span><code class="descname">props</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.intervals.Intervals.props" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="n">properties</span> <span class="nb">set</span> <span class="n">at</span> <span class="n">construction</span> <span class="n">time</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.intervals.Intervals.size">
-<span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals_1a32beab74ac740b767b1de05c963f23a3"></span><code class="descname">size</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.intervals.Intervals.size" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">intervals</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.intervals.Intervals.read">
-<span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals_1ad6e82368ff5450ca992a2b9299e40b34"></span><code class="descname">read</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.intervals.Intervals.read" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Read</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">intervals</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">reads</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">intervals</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">results</span> <span class="k">as</span>
-<span class="n">a</span> <span class="n">simple</span> <span class="n">Python</span> <span class="k">class</span> <span class="nc">with</span> <span class="n">data</span> <span class="n">members</span> <span class="k">for</span> <span class="n">start</span> <span class="o">/</span> <span class="n">stop</span> <span class="n">times</span> <span class="ow">and</span>
-<span class="n">first</span> <span class="o">/</span> <span class="n">last</span> <span class="n">samples</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">Intrvl</span> <span class="n">objects</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.intervals.Intervals.write">
-<span class="target" id="TIDASclasstidas_1_1intervals_1_1_intervals_1a6dddd31db842495710a71240541c779a"></span><code class="descname">write</code><span class="sig-paren">(</span><em>self self</em>, <em>data data</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.intervals.Intervals.write" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">intervals</span><span class="o">.</span>
-
-<span class="n">Takes</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">Intrvl</span> <span class="n">objects</span> <span class="ow">and</span> <span class="n">passes</span> <span class="n">them</span> <span class="n">to</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">C</span><span class="o">++</span>
-<span class="n">code</span> <span class="k">for</span> <span class="n">writing</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">data</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">Intrvl</span> <span class="n">objects</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -431,7 +364,7 @@ code for writing.</p>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2017, Theodore Kisner.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Volumes &#8212; TIDAS 0.2.0.dev138
+    <title>Volumes &#8212; TIDAS 0.3.0
  documentation</title>
     
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
@@ -15,27 +15,25 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0.dev138
-',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="TIDAS 0.2.0.dev138
- documentation" href="index.html" />
     <link rel="next" title="Groups" href="group.html" />
     <link rel="prev" title="Examples" href="example.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><img class="rightlogo" src="_static/tidas_logo_small.png" alt="Logo"/><h1 class="heading"><a href="index.html">
-          <span>TIDAS 0.2.0.dev138
+          <span>TIDAS 0.3.0
  documentation</span></a></h1>
         <h2 class="heading"><span>Volumes</span></h2>
       </div>
@@ -68,100 +66,31 @@
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="tidas.Volume">
-<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>path</em>, <em>mode='r'</em>, <em>backend='hdf5'</em>, <em>comp='none'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which represents a TIDAS volume.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; filesystem location of the volume to open or create.</li>
-<li><strong>mode</strong> (<em>str</em>) &#8211; whether to open the file in read-only (&#8220;r&#8221;) or
-read-write (&#8220;w&#8221;) mode.  Default is read-only for
-opening existing files and read-write for file creation.</li>
-<li><strong>backend</strong> (<em>str</em>) &#8211; the backend format to use.</li>
-<li><strong>comp</strong> (<em>str</em>) &#8211; the compression type to use.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="tidas.Volume.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Explicitly close the volume.</p>
-</dd></dl>
-
+<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: tidas._pytidas.Volume, arg0: str, arg1: tidas._pytidas.AccessMode) -&gt; None</li>
+<li>__init__(self: tidas._pytidas.Volume, arg0: str, arg1: tidas._pytidas.BackendType, arg2: tidas._pytidas.CompressionType, arg3: Dict[str, str]) -&gt; None</li>
+</ol>
 <dl class="method">
 <dt id="tidas.Volume.duplicate">
-<code class="descname">duplicate</code><span class="sig-paren">(</span><em>path</em>, <em>backend='hdf5'</em>, <em>comp='none'</em>, <em>selection=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume.duplicate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Duplicate the volume to a new location.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; filesystem location of the volume copy.</li>
-<li><strong>backend</strong> (<em>str</em>) &#8211; the backend format to use.</li>
-<li><strong>comp</strong> (<em>str</em>) &#8211; the compression type to use.</li>
-<li><strong>selection</strong> (<em>str</em>) &#8211; a selection filter to apply to the tree of
-blocks.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">duplicate</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Volume, arg0: str, arg1: tidas._pytidas.BackendType, arg2: tidas._pytidas.CompressionType, arg3: str, arg4: Dict[str, str]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Volume.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Volume.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>recurse=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print basic information about the root block to stdout.</p>
-<p>Mainly useful for debugging.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>recurse</strong> (<em>bool</em>) &#8211; if True, call recursively on child blocks.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">info</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Volume</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Volume.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Volume.link">
-<code class="descname">link</code><span class="sig-paren">(</span><em>path</em>, <em>ltype='soft'</em>, <em>selection=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume.link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume.link" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a linked copy of the volume.</p>
-<p>This will create a new volume where the properties file and all
-selected groups and intervals are links to the original.  If the
-original files are writeable, then these links will be as well.</p>
-<p>The metadata index is copied (not linked), so that new objects may
-be added locally.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; filesystem location of the volume copy.</li>
-<li><strong>ltype</strong> (<em>str</em>) &#8211; the link type to use (&#8220;soft&#8221; or &#8220;hard&#8221;).</li>
-<li><strong>selection</strong> (<em>str</em>) &#8211; a selection filter to apply to the tree of
-blocks.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">link</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Volume</em>, <em>arg0: str</em>, <em>arg1: tidas._pytidas.LinkType</em>, <em>arg2: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Volume.link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Volume.root">
-<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/volume.html#Volume.root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Volume.root" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a reference to the root block.</p>
-<p>A new python Block is returned containing a pointer to the root
-block of the volume.  However, this python class does not manage
-the lifetime of the C++ pointer.  As long as the volume is open,
-the pointer held by these root block instances will also be valid.</p>
-</dd></dl>
+<code class="descname">root</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Volume</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Block<a class="headerlink" href="#tidas.Volume.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -170,202 +99,112 @@ the pointer held by these root block instances will also be valid.</p>
 <h3>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt>
-<em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">volume</code></dt>
+<em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">volume</code><br /></dt>
 <dd><p>A volume is the top-level TIDAS object. </p>
 <p>A volume stores the backend format and properties and the metadata index. It contains the root block which is the parent of all blocks in the tree. Some public methods are only used internally and are not needed for normal use of the object. These are labelled &#8220;internal&#8221;. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt>
-<code class="descname">volume</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="descname">volume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Default constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">~volume</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="descname">~volume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span></dt>
+<a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Assignment operator. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">volume</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volume6volumeEv" title="tidas::volume::volume">volume</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span></dt>
+<code class="descname">volume</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volume6volumeEv" title="tidas::volume::volume">volume</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Copy constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">tidas::volume::volume(std::string const &amp; path, backend_type type, compression_type comp, std::map&lt; std::string, std::string &gt; extra = std::map&lt; std::string, std::string &gt;())</code></dt>
+<code class="descname">volume</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_typeE" title="tidas::backend_type">backend_type</a> <em>type</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas16compression_typeE" title="tidas::compression_type">compression_type</a> <em>comp</em>, std::map&lt;std::string, std::string&gt; <em>extra</em> = std::map&lt; std::string, std::string &gt;()<span class="sig-paren">)</span><br /></dt>
 <dd><p>Create a new volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">volume</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas11access_modeE" title="tidas::access_mode">access_mode</a> <em>mode</em><span class="sig-paren">)</span></dt>
+<code class="descname">volume</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas11access_modeE" title="tidas::access_mode">access_mode</a> <em>mode</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Open an existing volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">volume</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volume6volumeEv" title="tidas::volume::volume">volume</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span></dt>
+<code class="descname">volume</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volume6volumeEv" title="tidas::volume::volume">volume</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy constructor, with optional selection and new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span></dt>
+void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas6volumeE" title="tidas::volume">volume</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>(<strong>Internal</strong>) Create a copy of a volume, with optional selection and new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">void tidas::volume::duplicate(std::string const &amp; path, backend_type type, compression_type comp, std::string const &amp; filter = &quot;&quot;, std::map&lt; std::string, std::string &gt; extra = std::map&lt; std::string, std::string &gt;())</code> const</dt>
+void <code class="descname">duplicate</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_typeE" title="tidas::backend_type">backend_type</a> <em>type</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas16compression_typeE" title="tidas::compression_type">compression_type</a> <em>comp</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;, std::map&lt;std::string, std::string&gt; <em>extra</em> = std::map&lt; std::string, std::string &gt;()<span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Export a filtered subset of the volume to a new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-void <code class="descname">link</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> const</dt>
+void <code class="descname">link</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Create a (hard or soft) linked filtered subset of the volume to a new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-void <code class="descname">wipe</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> const</dt>
+void <code class="descname">wipe</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Delete the on-disk data and metadata associated with this object. </p>
 <p>In-memory metadata is not modified. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const</dt>
+<a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>(<strong>Internal</strong>) The current location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the root block of the volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const</dt>
+<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Get the (const) root block of the volume. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+void <code class="descname">info</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>Print info to a stream. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> P&gt;</dt>
 <dt>
-void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span></dt>
+void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span><br /></dt>
 <dd><p>Pass over the root block and all descendents, calling a functor on each one. </p>
 <p>The specified class should provide the operator() method. </p>
 </dd></dl>
 
 </div>
-<dl class="class">
-<dt>
-<em class="property">class </em><code class="descname">Volume</code></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">which</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">TIDAS</span> <span class="n">volume</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">path</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">to</span> <span class="nb">open</span> <span class="ow">or</span> <span class="n">create</span><span class="o">.</span>
-    <span class="n">mode</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">whether</span> <span class="n">to</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="ow">or</span>
-                <span class="n">read</span><span class="o">-</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="n">mode</span><span class="o">.</span>  <span class="n">Default</span> <span class="ow">is</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="k">for</span> 
-                <span class="n">opening</span> <span class="n">existing</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">read</span><span class="o">-</span><span class="n">write</span> <span class="k">for</span> <span class="n">file</span> <span class="n">creation</span><span class="o">.</span>
-    <span class="n">backend</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">backend</span> <span class="nb">format</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">comp</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">compression</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-<p>Inherits from object</p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt>
-<code class="descname">close</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Explicitly</span> <span class="n">close</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">duplicate</code><span class="sig-paren">(</span><em>self self</em>, <em>path path</em>, <em>backend backend = &quot;hdf5&quot;</em>, <em>comp comp = &quot;none&quot;</em>, <em>selection selection = &quot;&quot;</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Duplicate</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">to</span> <span class="n">a</span> <span class="n">new</span> <span class="n">location</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">path</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">copy</span><span class="o">.</span>
-    <span class="n">backend</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">backend</span> <span class="nb">format</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">comp</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">compression</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">selection</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">a</span> <span class="n">selection</span> <span class="nb">filter</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">the</span> <span class="n">tree</span> <span class="n">of</span>
-<span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">link</code><span class="sig-paren">(</span><em>self self</em>, <em>path path</em>, <em>ltype ltype = &quot;soft&quot;</em>, <em>selection selection = &quot;&quot;</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="n">linked</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">volume</span> <span class="n">where</span> <span class="n">the</span> <span class="n">properties</span> <span class="n">file</span> <span class="ow">and</span> <span class="nb">all</span>
-<span class="n">selected</span> <span class="n">groups</span> <span class="ow">and</span> <span class="n">intervals</span> <span class="n">are</span> <span class="n">links</span> <span class="n">to</span> <span class="n">the</span> <span class="n">original</span><span class="o">.</span>  <span class="n">If</span> <span class="n">the</span>
-<span class="n">original</span> <span class="n">files</span> <span class="n">are</span> <span class="n">writeable</span><span class="p">,</span> <span class="n">then</span> <span class="n">these</span> <span class="n">links</span> <span class="n">will</span> <span class="n">be</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span>
-
-<span class="n">The</span> <span class="n">metadata</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">copied</span> <span class="p">(</span><span class="ow">not</span> <span class="n">linked</span><span class="p">),</span> <span class="n">so</span> <span class="n">that</span> <span class="n">new</span> <span class="n">objects</span> <span class="n">may</span>
-<span class="n">be</span> <span class="n">added</span> <span class="n">locally</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">path</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">copy</span><span class="o">.</span>
-    <span class="n">ltype</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">link</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span> <span class="p">(</span><span class="s2">&quot;soft&quot;</span> <span class="ow">or</span> <span class="s2">&quot;hard&quot;</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">selection</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">a</span> <span class="n">selection</span> <span class="nb">filter</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">the</span> <span class="n">tree</span> <span class="n">of</span>
-<span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">info</code><span class="sig-paren">(</span><em>self self</em>, <em>recurse recurse = True</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Print</span> <span class="n">basic</span> <span class="n">information</span> <span class="n">about</span> <span class="n">the</span> <span class="n">root</span> <span class="n">block</span> <span class="n">to</span> <span class="n">stdout</span><span class="o">.</span>
-
-<span class="n">Mainly</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">debugging</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">recurse</span> <span class="p">(</span><span class="nb">bool</span><span class="p">):</span> <span class="k">if</span> <span class="kc">True</span><span class="p">,</span> <span class="n">call</span> <span class="n">recursively</span> <span class="n">on</span> <span class="n">child</span> <span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">root</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">a</span> <span class="n">reference</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span> <span class="n">block</span><span class="o">.</span>
-    
-<span class="n">A</span> <span class="n">new</span> <span class="n">python</span> <span class="n">Block</span> <span class="ow">is</span> <span class="n">returned</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span>
-<span class="n">block</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>  <span class="n">However</span><span class="p">,</span> <span class="n">this</span> <span class="n">python</span> <span class="k">class</span> <span class="nc">does</span> <span class="ow">not</span> <span class="n">manage</span>
-<span class="n">the</span> <span class="n">lifetime</span> <span class="n">of</span> <span class="n">the</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span><span class="o">.</span>  <span class="n">As</span> <span class="n">long</span> <span class="k">as</span> <span class="n">the</span> <span class="n">volume</span> <span class="ow">is</span> <span class="nb">open</span><span class="p">,</span>
-<span class="n">the</span> <span class="n">pointer</span> <span class="n">held</span> <span class="n">by</span> <span class="n">these</span> <span class="n">root</span> <span class="n">block</span> <span class="n">instances</span> <span class="n">will</span> <span class="n">also</span> <span class="n">be</span> <span class="n">valid</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -377,353 +216,106 @@ void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<e
 <h3>Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="tidas.Block">
-<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Block</code><span class="sig-paren">(</span><em>handle=None</em>, <em>managed=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which represents a TIDAS block.</p>
-<dl class="method">
+<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Block</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
 <dt id="tidas.Block.aux_dir">
-<code class="descname">aux_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.aux_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.aux_dir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the filesystem path of the auxilliary data directory.</p>
-<p>Each block has an associated directory for extra user-defined
-data.  This function returns the path to this directory for this
-block.</p>
-<dl class="docutils">
-<dt>Returns (str):</dt>
-<dd>path to the auxilliary data directory.</dd>
-</dl>
-</dd></dl>
+<code class="descname">aux_dir</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#tidas.Block.aux_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.block_add">
-<code class="descname">block_add</code><span class="sig-paren">(</span><em>name</em>, <em>blk=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.block_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.block_add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add the specified child block to this block.</p>
-<p>If the python Block instance does not have a C++ handle
-associated with it, then a new C++ instance is created before
-adding it.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<em>str</em>) &#8211; the name of the block.</li>
-<li><strong>blk</strong> (<a class="reference internal" href="#tidas.Block" title="tidas.Block"><em>Block</em></a>) &#8211; the block to add.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Block):</dt>
-<dd>a copy of the newly added child block.</dd>
-</dl>
-</dd></dl>
+<code class="descname">block_add</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em>, <em>arg1: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Block<a class="headerlink" href="#tidas.Block.block_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.block_del">
-<code class="descname">block_del</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.block_del"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.block_del" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete the specified sub-block from the block.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the sub-block.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">block_del</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.block_del" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.block_get">
-<code class="descname">block_get</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.block_get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.block_get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the specified block.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the block.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Block):</dt>
-<dd>the requested block.</dd>
-</dl>
-</dd></dl>
+<code class="descname">block_get</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Block<a class="headerlink" href="#tidas.Block.block_get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.block_names">
-<code class="descname">block_names</code><span class="sig-paren">(</span><em>filter=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.block_names"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.block_names" title="Permalink to this definition">¶</a></dt>
-<dd><p>The names of all sub-blocks in this block.</p>
-<dl class="docutils">
-<dt>Returns (list):</dt>
-<dd>a list of all the block names.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tidas.Block.blocks">
-<code class="descname">blocks</code><span class="sig-paren">(</span><em>names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary of all the specified blocks.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>names</strong> (<em>list</em>) &#8211; a list of strings with the block names.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (dict):</dt>
-<dd>a dictionary keyed on the names whose values are Block
-instances.</dd>
-</dl>
-</dd></dl>
+<code class="descname">block_names</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#tidas.Block.block_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove all groups, intervals and sub-blocks from this block.</p>
-</dd></dl>
+<code class="descname">clear</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.clear_blocks">
-<code class="descname">clear_blocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.clear_blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.clear_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove all sub-blocks from this block.</p>
-</dd></dl>
+<code class="descname">clear_blocks</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.clear_blocks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.clear_groups">
-<code class="descname">clear_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.clear_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.clear_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove all groups from this block.</p>
-</dd></dl>
+<code class="descname">clear_groups</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.clear_groups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.clear_intervals">
-<code class="descname">clear_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.clear_intervals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.clear_intervals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove all intervals from this block.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tidas.Block.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Explicitly close the block (free the underlying C++ pointer).</p>
-</dd></dl>
+<code class="descname">clear_intervals</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.clear_intervals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.group_add">
-<code class="descname">group_add</code><span class="sig-paren">(</span><em>name</em>, <em>grp</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.group_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.group_add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add the specified group to the block.</p>
-<p>Adds a copy of the group to this block.  If the python Group instance
-does not have a C++ handle associated with it, then a new C++ instance
-is created before adding it.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<em>str</em>) &#8211; the name of the group.</li>
-<li><strong>grp</strong> (<a class="reference internal" href="group.html#tidas.Group" title="tidas.Group"><em>Group</em></a>) &#8211; the group to add.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Group):</dt>
-<dd>a copy of the newly added Group associated with the block.</dd>
-</dl>
-</dd></dl>
+<code class="descname">group_add</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em>, <em>arg1: tidas._pytidas.Group</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Group<a class="headerlink" href="#tidas.Block.group_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.group_del">
-<code class="descname">group_del</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.group_del"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.group_del" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete the specified group from the block.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the group.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">group_del</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.group_del" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.group_get">
-<code class="descname">group_get</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.group_get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.group_get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the specified group.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the group.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Group):</dt>
-<dd>the requested group.</dd>
-</dl>
-</dd></dl>
+<code class="descname">group_get</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Group<a class="headerlink" href="#tidas.Block.group_get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.group_names">
-<code class="descname">group_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.group_names"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.group_names" title="Permalink to this definition">¶</a></dt>
-<dd><p>The names of all groups in this block.</p>
-<dl class="docutils">
-<dt>Returns (list):</dt>
-<dd>a list of all the group names.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tidas.Block.groups">
-<code class="descname">groups</code><span class="sig-paren">(</span><em>names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary of all the specified groups.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>names</strong> (<em>list</em>) &#8211; a list of strings with the group names.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (dict):</dt>
-<dd>a dictionary keyed on the names whose values are Group
-instances.</dd>
-</dl>
-</dd></dl>
+<code class="descname">group_names</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#tidas.Block.group_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>name=''</em>, <em>recurse=True</em>, <em>indent=2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print basic information about this block to stdout.</p>
-<p>Mainly useful for debugging.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of this group in the parent block.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="tidas.Block.intervals">
-<code class="descname">intervals</code><span class="sig-paren">(</span><em>names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.intervals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.intervals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary of all the specified intervals.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>names</strong> (<em>list</em>) &#8211; a list of strings with the intervals names.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (dict):</dt>
-<dd>a dictionary keyed on the names whose values are Intervals
-instances.</dd>
-</dl>
-</dd></dl>
+<code class="descname">info</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: std::ostream</em>, <em>arg1: int</em>, <em>arg2: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.intervals_add">
-<code class="descname">intervals_add</code><span class="sig-paren">(</span><em>name</em>, <em>intr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.intervals_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.intervals_add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add the specified intervals to the block.</p>
-<p>Adds a copy of the intervals to this block.  If the python Intervals
-instance does not have a C++ handle associated with it, then a new
-C++ instance is created before adding it.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<em>str</em>) &#8211; the name of the Intervals.</li>
-<li><strong>intr</strong> (<a class="reference internal" href="intervals.html#tidas.Intervals" title="tidas.Intervals"><em>Intervals</em></a>) &#8211; the Intervals to add.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Intervals):</dt>
-<dd>a copy of the newly added Intervals associated with the block.</dd>
-</dl>
-</dd></dl>
+<code class="descname">intervals_add</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em>, <em>arg1: tidas._pytidas.Intervals</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Intervals<a class="headerlink" href="#tidas.Block.intervals_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.intervals_del">
-<code class="descname">intervals_del</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.intervals_del"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.intervals_del" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete the specified intervals from the block.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the intervals.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">intervals_del</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Block.intervals_del" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.intervals_get">
-<code class="descname">intervals_get</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.intervals_get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.intervals_get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the specified intervals.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of the intervals.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Intervals):</dt>
-<dd>the requested intervals.</dd>
-</dl>
-</dd></dl>
+<code class="descname">intervals_get</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Intervals<a class="headerlink" href="#tidas.Block.intervals_get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.intervals_names">
-<code class="descname">intervals_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.intervals_names"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.intervals_names" title="Permalink to this definition">¶</a></dt>
-<dd><p>The names of all intervals in this block.</p>
-<dl class="docutils">
-<dt>Returns (list):</dt>
-<dd>a list of all the intervals names.</dd>
-</dl>
-</dd></dl>
+<code class="descname">intervals_names</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#tidas.Block.intervals_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.range">
-<code class="descname">range</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.range" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the extrema of timestamps of all groups in this block.</p>
-<p>This is not recursive (does not traverse sub-blocks).</p>
-<dl class="docutils">
-<dt>Returns (tuple):</dt>
-<dd>the minimum / maximum start / stop times.</dd>
-</dl>
-</dd></dl>
+<code class="descname">range</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em><span class="sig-paren">)</span> &#x2192; Tuple[float, float]<a class="headerlink" href="#tidas.Block.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Block.select">
-<code class="descname">select</code><span class="sig-paren">(</span><em>filter=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/block.html#Block.select"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Block.select" title="Permalink to this definition">¶</a></dt>
-<dd><p>Recursively copy the current block and all descendents,
-applying the specified matching pattern.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> (<em>str</em>) &#8211; the selection string to apply.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (Block):</dt>
-<dd>a Block copy with a pruned tree of objects.</dd>
-</dl>
-</dd></dl>
+<code class="descname">select</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Block</em>, <em>arg0: str</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Block<a class="headerlink" href="#tidas.Block.select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -732,231 +324,231 @@ applying the specified matching pattern.</p>
 <h3>C++<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="_CPPv2N5tidas5blockE">
-<span id="tidas::block"></span><span class="target" id="TIDASclasstidas_1_1block"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">block</code><a class="headerlink" href="#_CPPv2N5tidas5blockE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block"></span><span class="target" id="classtidas_1_1block"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">block</code><a class="headerlink" href="#_CPPv2N5tidas5blockE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A block represents a logical grouping of data. </p>
 <p>A block can have zero or more groups, intervals and sub-blocks. Child objects are added with a &#8220;name&#8221; associated to them. These names are used when performing selection / query operations. Some public methods are only used internally and are not needed for normal use of the object. These are labelled &#8220;internal&#8221;. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas5block5blockEv">
-<span id="tidas::block::block"></span><span class="target" id="TIDASclasstidas_1_1block_1a9a2578f3ad4d9f92c100c86ddd21911c"></span><code class="descname">block</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block"></span><span class="target" id="classtidas_1_1block_1a9a2578f3ad4d9f92c100c86ddd21911c"></span><code class="descname">block</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5blockD0Ev">
-<span id="tidas::block::~block"></span><span class="target" id="TIDASclasstidas_1_1block_1a3ae1fd48f45e9b95a10ed19094e36d33"></span><code class="descname">~block</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5blockD0Ev" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::~block"></span><span class="target" id="classtidas_1_1block_1a3ae1fd48f45e9b95a10ed19094e36d33"></span><code class="descname">~block</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5blockD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5blockaSER5block">
-<span id="tidas::block::assign-operator__blockCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a5695b14446feca275e32cb8af309394a"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5blockaSER5block" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::assign-operator__blockCR"></span><span class="target" id="classtidas_1_1block_1a5695b14446feca275e32cb8af309394a"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5blockaSER5block" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Assignment operator. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block5blockER5block">
-<span id="tidas::block::block__blockCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a731642fc340301102c3aef9b5168107b"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5block5blockEv" title="tidas::block::block">block</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER5block" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block__blockCR"></span><span class="target" id="classtidas_1_1block_1a731642fc340301102c3aef9b5168107b"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5block5blockEv" title="tidas::block::block">block</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER5block" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block5blockER12backend_pathRNSt6stringE">
-<span id="tidas::block::block__backend_pathCR.ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a834cbaaaf34b311a776eabe064a08035"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER12backend_pathRNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block__backend_pathCR.ssCR"></span><span class="target" id="classtidas_1_1block_1a834cbaaaf34b311a776eabe064a08035"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER12backend_pathRNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Load a block from disk with the specified selection filter. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block5blockER5blockRNSt6stringER12backend_path">
-<span id="tidas::block::block__blockCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a563badefdffdfe6f4cd3e19d20fbbbe7"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5block5blockEv" title="tidas::block::block">block</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER5blockRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block__blockCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1block_1a563badefdffdfe6f4cd3e19d20fbbbe7"></span><code class="descname">block</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5block5blockEv" title="tidas::block::block">block</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5blockER5blockRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Create a copy of a block, with optional selection and new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block8relocateER12backend_path">
-<span id="tidas::block::relocate__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a1e260d35eb5c12537525127005000e08"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block8relocateER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::relocate__backend_pathCR"></span><span class="target" id="classtidas_1_1block_1a1e260d35eb5c12537525127005000e08"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block8relocateER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Change the location of the block. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block4syncERNSt6stringE">
-<span id="tidas::block::sync__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1ac4dfaac3b8f3ac07340ba8b2647fa457"></span>void <code class="descname">sync</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4syncERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::sync__ssCR"></span><span class="target" id="classtidas_1_1block_1ac4dfaac3b8f3ac07340ba8b2647fa457"></span>void <code class="descname">sync</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4syncERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Recursively read the metadata for the block and its children from disk. </p>
 <p>Optionally apply a selection filter. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block5flushEv">
-<span id="tidas::block::flush"></span><span class="target" id="TIDASclasstidas_1_1block_1af5fd0c6efdf55c0e21e3c5323f9def5d"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block5flushEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block5flushEv">
+<span id="tidas::block::flushC"></span><span class="target" id="classtidas_1_1block_1a8deb761dbcaca951bf83b7d91fa25238"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block5flushEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Recursively write metadata for the block and its children. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block4copyER5blockRNSt6stringER12backend_path">
-<span id="tidas::block::copy__blockCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1block_1ab1db3c75c4eb4606e773fcbc1b221acc"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4copyER5blockRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::copy__blockCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1block_1ab1db3c75c4eb4606e773fcbc1b221acc"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4copyER5blockRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy with optional selection and relocation. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block4linkER9link_typeRNSt6stringE">
-<span id="tidas::block::link__link_typeCR.ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1aad1cd8164161f17bf42bc0a20df8e138"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block4linkER9link_typeRNSt6stringE">
+<span id="tidas::block::link__link_typeCR.ssCRC"></span><span class="target" id="classtidas_1_1block_1ad40fc3e051ff82c95e51160b23271bdd"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Create a link at the specified location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block4wipeEv">
-<span id="tidas::block::wipe"></span><span class="target" id="TIDASclasstidas_1_1block_1ae4e5ca1165485247cde895195ca55509"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block4wipeEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block4wipeEv">
+<span id="tidas::block::wipeC"></span><span class="target" id="classtidas_1_1block_1ad8b476013e7ef69bc6f6f5a9ac96d53b"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block4wipeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Delete the on-disk data and metadata associated with this object. </p>
 <p>In-memory metadata is not modified. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block8locationEv">
-<span id="tidas::block::location"></span><span class="target" id="TIDASclasstidas_1_1block_1abef9faa66992f59d96d4129df2bf5bac"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block8locationEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block8locationEv">
+<span id="tidas::block::locationC"></span><span class="target" id="classtidas_1_1block_1a814a9c857dac199e9604cba1cf5ac88f"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block8locationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) The current location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block7aux_dirEv">
-<span id="tidas::block::aux_dir"></span><span class="target" id="TIDASclasstidas_1_1block_1af471404fd7f702e584dbf704429da285"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a> <code class="descname">aux_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block7aux_dirEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block7aux_dirEv">
+<span id="tidas::block::aux_dirC"></span><span class="target" id="classtidas_1_1block_1ae82935fccacbebfde8920d183e075882"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a> <code class="descname">aux_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block7aux_dirEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the filesystem path of the auxilliary directory for this block. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block5rangeER9time_typeR9time_type">
-<span id="tidas::block::range__time_typeR.time_typeR"></span><span class="target" id="TIDASclasstidas_1_1block_1a0f0c02dcf29d190d9da8b706b58206cd"></span>void <code class="descname">range</code><span class="sig-paren">(</span>time_type &amp;<em>start</em>, time_type &amp;<em>stop</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block5rangeER9time_typeR9time_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block5rangeER9time_typeR9time_type">
+<span id="tidas::block::range__time_typeR.time_typeRC"></span><span class="target" id="classtidas_1_1block_1a1def8550e3662306f3a08b003ecd7d5a"></span>void <code class="descname">range</code><span class="sig-paren">(</span>time_type &amp;<em>start</em>, time_type &amp;<em>stop</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block5rangeER9time_typeR9time_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the extrema of timestamps of all groups in this block. </p>
 <p>This is not recursive (does not traverse sub-blocks). </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block5clearEv">
-<span id="tidas::block::clear"></span><span class="target" id="TIDASclasstidas_1_1block_1aaabe0ed94ffd427e286600a2a0b11c71"></span>void <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5clearEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::clear"></span><span class="target" id="classtidas_1_1block_1aaabe0ed94ffd427e286600a2a0b11c71"></span>void <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block5clearEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Removes all groups, intervals, and sub-blocks from this block. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9group_addERNSt6stringER5group">
-<span id="tidas::block::group_add__ssCR.groupCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a642b9faf5958a1f953fef6b04eddd735"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">group_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_addERNSt6stringER5group" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::group_add__ssCR.groupCR"></span><span class="target" id="classtidas_1_1block_1a642b9faf5958a1f953fef6b04eddd735"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">group_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_addERNSt6stringER5group" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add a group to this block using the specified name. </p>
 <p>Returns a refererence to the newly added group. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9group_getERNSt6stringE">
-<span id="tidas::block::group_get__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a2d4861353b08f080cc08e46cc743cebc"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">group_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::group_get__ssCR"></span><span class="target" id="classtidas_1_1block_1a2d4861353b08f080cc08e46cc743cebc"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">group_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (non-const) reference to the group with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block9group_getERNSt6stringE">
-<span class="target" id="TIDASclasstidas_1_1block_1a5b5fb11d4793e413d385cb64a5673157"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<code class="descname">group_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block9group_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block9group_getERNSt6stringE">
+<span id="tidas::block::group_get__ssCRC"></span><span class="target" id="classtidas_1_1block_1adc78d48872d0d8f5a276993be51c0a38"></span><a class="reference internal" href="group.html#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<code class="descname">group_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block9group_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (non-const) reference to the group with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9group_delERNSt6stringE">
-<span id="tidas::block::group_del__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1ab94aedbd700213377b5dc8f919c88635"></span>void <code class="descname">group_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_delERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::group_del__ssCR"></span><span class="target" id="classtidas_1_1block_1ab94aedbd700213377b5dc8f919c88635"></span>void <code class="descname">group_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9group_delERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Delete the specified group. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block10all_groupsEv">
-<span id="tidas::block::all_groups"></span><span class="target" id="TIDASclasstidas_1_1block_1aa2c247e086a0621470c7fcbb2c10c52e"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">all_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block10all_groupsEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block11group_namesEv">
+<span id="tidas::block::group_namesC"></span><span class="target" id="classtidas_1_1block_1a3b1e8a0e460beea17fee40705357ef6c"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">group_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block11group_namesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a list of the names of all groups. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block12clear_groupsEv">
-<span id="tidas::block::clear_groups"></span><span class="target" id="TIDASclasstidas_1_1block_1a720fc5891517426b774ab1850b03c7c3"></span>void <code class="descname">clear_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block12clear_groupsEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::clear_groups"></span><span class="target" id="classtidas_1_1block_1a720fc5891517426b774ab1850b03c7c3"></span>void <code class="descname">clear_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block12clear_groupsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove all groups from this block. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block13intervals_addERNSt6stringER9intervals">
-<span id="tidas::block::intervals_add__ssCR.intervalsCR"></span><span class="target" id="TIDASclasstidas_1_1block_1aa651cd89e1a6776a28d64df98acacfcc"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">intervals_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_addERNSt6stringER9intervals" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::intervals_add__ssCR.intervalsCR"></span><span class="target" id="classtidas_1_1block_1aa651cd89e1a6776a28d64df98acacfcc"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">intervals_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<em>intr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_addERNSt6stringER9intervals" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add an intervals object to this block using the specified name. </p>
 <p>Returns a refererence to the newly added intervals. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block13intervals_getERNSt6stringE">
-<span id="tidas::block::intervals_get__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a9137348dab6ae94866e4833ef80ba1bb"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">intervals_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::intervals_get__ssCR"></span><span class="target" id="classtidas_1_1block_1a9137348dab6ae94866e4833ef80ba1bb"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> &amp;<code class="descname">intervals_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (non-const) reference to the intervals object with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block13intervals_getERNSt6stringE">
-<span class="target" id="TIDASclasstidas_1_1block_1aaf4c90a2b6be5921992dfd6a53c013a1"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<code class="descname">intervals_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block13intervals_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block13intervals_getERNSt6stringE">
+<span id="tidas::block::intervals_get__ssCRC"></span><span class="target" id="classtidas_1_1block_1a28e5050ae26af26349f469d7acae8e79"></span><a class="reference internal" href="intervals.html#_CPPv2N5tidas9intervalsE" title="tidas::intervals">intervals</a> <em class="property">const</em> &amp;<code class="descname">intervals_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block13intervals_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (const) reference to the intervals object with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block13intervals_delERNSt6stringE">
-<span id="tidas::block::intervals_del__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a9eb25576ebadd9daf757996210deb0c5"></span>void <code class="descname">intervals_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_delERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::intervals_del__ssCR"></span><span class="target" id="classtidas_1_1block_1a9eb25576ebadd9daf757996210deb0c5"></span>void <code class="descname">intervals_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block13intervals_delERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Delete the specified intervals object. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block13all_intervalsEv">
-<span id="tidas::block::all_intervals"></span><span class="target" id="TIDASclasstidas_1_1block_1a7eb0bef6832668dcb8d2c83e761a54d3"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">all_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block13all_intervalsEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block15intervals_namesEv">
+<span id="tidas::block::intervals_namesC"></span><span class="target" id="classtidas_1_1block_1adad47fbaf69d1daf9c63a808c1b02e01"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">intervals_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block15intervals_namesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a list of the names of all intervals. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block15clear_intervalsEv">
-<span id="tidas::block::clear_intervals"></span><span class="target" id="TIDASclasstidas_1_1block_1abf9e92d95e0dc487f73b2617d4a75415"></span>void <code class="descname">clear_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block15clear_intervalsEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::clear_intervals"></span><span class="target" id="classtidas_1_1block_1abf9e92d95e0dc487f73b2617d4a75415"></span>void <code class="descname">clear_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block15clear_intervalsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove all intervals objects from this block. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9block_addERNSt6stringER5block">
-<span id="tidas::block::block_add__ssCR.blockCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a102ece7353cce23a69a8247d7bf40a96"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">block_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>blk</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_addERNSt6stringER5block" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block_add__ssCR.blockCR"></span><span class="target" id="classtidas_1_1block_1a102ece7353cce23a69a8247d7bf40a96"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">block_add</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em>, <a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<em>blk</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_addERNSt6stringER5block" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add a sub-block to this block using the specified name. </p>
 <p>Returns a reference to the newly added block. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9block_getERNSt6stringE">
-<span id="tidas::block::block_get__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1afe75cf8effab3e67e511933a1ed87dce"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">block_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block_get__ssCR"></span><span class="target" id="classtidas_1_1block_1afe75cf8effab3e67e511933a1ed87dce"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">block_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (non-const) reference to the sub-block with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block9block_getERNSt6stringE">
-<span class="target" id="TIDASclasstidas_1_1block_1a2d1967d38cf5c16ef4a0c43361b20771"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">block_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block9block_getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block9block_getERNSt6stringE">
+<span id="tidas::block::block_get__ssCRC"></span><span class="target" id="classtidas_1_1block_1abb927d93f381ad897bdd0c9d4355d28b"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">block_get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block9block_getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a (const) reference to the sub-block with the specified name. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block9block_delERNSt6stringE">
-<span id="tidas::block::block_del__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a357ca15dd5aad7ae2f71d1ea5258e358"></span>void <code class="descname">block_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_delERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::block_del__ssCR"></span><span class="target" id="classtidas_1_1block_1a357ca15dd5aad7ae2f71d1ea5258e358"></span>void <code class="descname">block_del</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block9block_delERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove the specified sub-block. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block10all_blocksEv">
-<span id="tidas::block::all_blocks"></span><span class="target" id="TIDASclasstidas_1_1block_1ab7a0673903ac7fe7e9060daa12caa355"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">all_blocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block10all_blocksEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block11block_namesEv">
+<span id="tidas::block::block_namesC"></span><span class="target" id="classtidas_1_1block_1a1a237877df3a87e5818b7372b0eebab3"></span>vector&lt;<a class="reference internal" href="dev.html#_CPPv2N5tidas6stringE" title="tidas::string">string</a>&gt; <code class="descname">block_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block11block_namesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a list of the names of all sub-blocks. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5block12clear_blocksEv">
-<span id="tidas::block::clear_blocks"></span><span class="target" id="TIDASclasstidas_1_1block_1a8dea8ee36b9e64fbe2563a4c58628f10"></span>void <code class="descname">clear_blocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block12clear_blocksEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::clear_blocks"></span><span class="target" id="classtidas_1_1block_1a8dea8ee36b9e64fbe2563a4c58628f10"></span>void <code class="descname">clear_blocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block12clear_blocksEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove all sub-blocks from this block. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block6selectERNSt6stringE">
-<span id="tidas::block::select__ssCR"></span><span class="target" id="TIDASclasstidas_1_1block_1a4c5140e4513c042dbc08e0e84848d8fc"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <code class="descname">select</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block6selectERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block6selectERNSt6stringE">
+<span id="tidas::block::select__ssCRC"></span><span class="target" id="classtidas_1_1block_1ab528cd1d87ae9570c927f48755e751b6"></span><a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <code class="descname">select</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block6selectERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Recursively copy the current block and all descendents, applying the specified matching pattern. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5block4infoENSt6stringEb6size_t">
-<span id="tidas::block::info__ss.b.s"></span><span class="target" id="TIDASclasstidas_1_1block_1a66896f1cef966b014f633328ef1fae82"></span>void <code class="descname">info</code><span class="sig-paren">(</span>std::string <em>name</em>, bool <em>recurse</em>, size_t <em>indent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4infoENSt6stringEb6size_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>(<strong>Internal</strong>) Print metadat info for this block. </p>
+<dt id="_CPPv2NK5tidas5block4infoERNSt7ostreamE6size_tb">
+<span id="tidas::block::info__osR.s.bC"></span><span class="target" id="classtidas_1_1block_1a1e909fae983418c1b6d0d90721083fe7"></span>void <code class="descname">info</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em>, size_t <em>indent</em>, bool <em>recurse</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block4infoERNSt7ostreamE6size_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>(<strong>Internal</strong>) Print metadata info for this block. </p>
 <p>Mainly used for debugging. </p>
 </dd></dl>
 
@@ -964,7 +556,7 @@ applying the specified matching pattern.</p>
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> P&gt;</dt>
 <dt id="_CPPv2N5tidas5block4execER1P10exec_order">
-<span id="tidas::block::exec__PR.exec_order"></span><span class="target" id="TIDASclasstidas_1_1block_1a7435bc824e0800e1b6765c4c37a1960c"></span>void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4execER1P10exec_order" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::block::exec__PR.exec_order"></span><span class="target" id="classtidas_1_1block_1a7435bc824e0800e1b6765c4c37a1960c"></span>void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5block4execER1P10exec_order" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Pass over this block and all descendents, calling a functor on each one. </p>
 <p>The specified class should provide the operator() method. Blocks may be modified by this version. </p>
 </dd></dl>
@@ -972,356 +564,13 @@ applying the specified matching pattern.</p>
 <dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> P&gt;</dt>
-<dt id="_CPPv2N5tidas5block4execER1P10exec_order">
-<span class="target" id="TIDASclasstidas_1_1block_1a126f4f3d4f8d2695a35cd49f06271223"></span>void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5block4execER1P10exec_order" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5block4execER1P10exec_order">
+<span id="tidas::block::exec__PR.exec_orderC"></span><span class="target" id="classtidas_1_1block_1a0fa4b455805678e07460c4af08684e02"></span>void <code class="descname">exec</code><span class="sig-paren">(</span>P &amp;<em>op</em>, exec_order <em>order</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5block4execER1P10exec_order" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Pass over this block and all descendents, calling a functor on each one. </p>
 <p>The specified class should provide the operator() method. Blocks are treated as const in this version. </p>
 </dd></dl>
 
 </div>
-<dl class="class">
-<dt id="_CPPv2N5tidas5block5BlockE">
-<span id="tidas::block::Block"></span><span class="target" id="TIDASclasstidas_1_1block_1_1_block"></span><em class="property">class </em><code class="descname">Block</code><a class="headerlink" href="#_CPPv2N5tidas5block5BlockE" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">which</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">TIDAS</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-<p>Inherits from object</p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="tidas.block.Block.close">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a94b733e7118ab8f1caf12af66939b813"></span><code class="descname">close</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.close" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Explicitly</span> <span class="n">close</span> <span class="n">the</span> <span class="n">block</span> <span class="p">(</span><span class="n">free</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span><span class="p">)</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.clear_groups">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a3f574462daa564865cf926b042c1a0c2"></span><code class="descname">clear_groups</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.clear_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="nb">all</span> <span class="n">groups</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.clear_intervals">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1adcc911439dea25f104eab97744a11bd9"></span><code class="descname">clear_intervals</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.clear_intervals" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="nb">all</span> <span class="n">intervals</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.clear_blocks">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a860208ef1be26506c98cc354a7f6b3a7"></span><code class="descname">clear_blocks</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.clear_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="nb">all</span> <span class="n">sub</span><span class="o">-</span><span class="n">blocks</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.clear">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a67f688cccbf98cf3eae038c9891ce200"></span><code class="descname">clear</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Remove</span> <span class="nb">all</span> <span class="n">groups</span><span class="p">,</span> <span class="n">intervals</span> <span class="ow">and</span> <span class="n">sub</span><span class="o">-</span><span class="n">blocks</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.range">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1ac1c6d959df26e81e86d4109f3790c7f3"></span><code class="descname">range</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.range" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Returns</span> <span class="n">the</span> <span class="n">extrema</span> <span class="n">of</span> <span class="n">timestamps</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">groups</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">recursive</span> <span class="p">(</span><span class="n">does</span> <span class="ow">not</span> <span class="n">traverse</span> <span class="n">sub</span><span class="o">-</span><span class="n">blocks</span><span class="p">)</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">minimum</span> <span class="o">/</span> <span class="n">maximum</span> <span class="n">start</span> <span class="o">/</span> <span class="n">stop</span> <span class="n">times</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.aux_dir">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a2db1b482b7ff8522ba751326e3567890"></span><code class="descname">aux_dir</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.aux_dir" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Returns</span> <span class="n">the</span> <span class="n">filesystem</span> <span class="n">path</span> <span class="n">of</span> <span class="n">the</span> <span class="n">auxilliary</span> <span class="n">data</span> <span class="n">directory</span><span class="o">.</span>
-
-<span class="n">Each</span> <span class="n">block</span> <span class="n">has</span> <span class="n">an</span> <span class="n">associated</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">extra</span> <span class="n">user</span><span class="o">-</span><span class="n">defined</span>
-<span class="n">data</span><span class="o">.</span>  <span class="n">This</span> <span class="n">function</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">this</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">this</span>
-<span class="n">block</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span>
-    <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">auxilliary</span> <span class="n">data</span> <span class="n">directory</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.group_names">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a747f5f254c509eac963efda241247941"></span><code class="descname">group_names</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.group_names" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">names</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">groups</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">group</span> <span class="n">names</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.groups">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1aa97553bb34675d3305c9d085987ac5ab"></span><code class="descname">groups</code><span class="sig-paren">(</span><em>self self</em>, <em>names names</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">groups</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">names</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">strings</span> <span class="k">with</span> <span class="n">the</span> <span class="n">group</span> <span class="n">names</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">dictionary</span> <span class="n">keyed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">names</span> <span class="n">whose</span> <span class="n">values</span> <span class="n">are</span> <span class="n">Group</span>
-    <span class="n">instances</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.group_get">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1ab7cc7e9916cb243f2446d1c40449737d"></span><code class="descname">group_get</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.group_get" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Group</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">requested</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.group_add">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a3fc4c54859596e868d664b58b52af2b2"></span><code class="descname">group_add</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em>, <em>grp grp</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.group_add" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">group</span> <span class="n">to</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Adds</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span> <span class="n">to</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>  <span class="n">If</span> <span class="n">the</span> <span class="n">python</span> <span class="n">Group</span> <span class="n">instance</span>
-<span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">C</span><span class="o">++</span> <span class="n">handle</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">it</span><span class="p">,</span> <span class="n">then</span> <span class="n">a</span> <span class="n">new</span> <span class="n">C</span><span class="o">++</span> <span class="n">instance</span>
-<span class="ow">is</span> <span class="n">created</span> <span class="n">before</span> <span class="n">adding</span> <span class="n">it</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-    <span class="n">grp</span> <span class="p">(</span><span class="n">Group</span><span class="p">):</span> <span class="n">the</span> <span class="n">group</span> <span class="n">to</span> <span class="n">add</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Group</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">newly</span> <span class="n">added</span> <span class="n">Group</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.group_del">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a782c9b81fa58d952d9b689facc27c160"></span><code class="descname">group_del</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.group_del" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Delete</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">group</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.intervals_names">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a7eef35e07c75a4ee2232486755576bfa"></span><code class="descname">intervals_names</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.intervals_names" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">names</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">intervals</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">intervals</span> <span class="n">names</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.intervals">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a12d62e761e690eae66be01b1180879c3"></span><code class="descname">intervals</code><span class="sig-paren">(</span><em>self self</em>, <em>names names</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.intervals" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">intervals</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">names</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">strings</span> <span class="k">with</span> <span class="n">the</span> <span class="n">intervals</span> <span class="n">names</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">dictionary</span> <span class="n">keyed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">names</span> <span class="n">whose</span> <span class="n">values</span> <span class="n">are</span> <span class="n">Intervals</span>
-    <span class="n">instances</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.intervals_get">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1ad7891751b82adb0985be85d8ecf973d5"></span><code class="descname">intervals_get</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.intervals_get" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">intervals</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">intervals</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Intervals</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">requested</span> <span class="n">intervals</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.intervals_add">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a206ebb04c5dc6060a0f494cdab58b221"></span><code class="descname">intervals_add</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em>, <em>intr intr</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.intervals_add" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">intervals</span> <span class="n">to</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Adds</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">intervals</span> <span class="n">to</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>  <span class="n">If</span> <span class="n">the</span> <span class="n">python</span> <span class="n">Intervals</span>
-<span class="n">instance</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">C</span><span class="o">++</span> <span class="n">handle</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">it</span><span class="p">,</span> <span class="n">then</span> <span class="n">a</span> <span class="n">new</span> 
-<span class="n">C</span><span class="o">++</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">created</span> <span class="n">before</span> <span class="n">adding</span> <span class="n">it</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Intervals</span><span class="o">.</span>
-    <span class="n">intr</span> <span class="p">(</span><span class="n">Intervals</span><span class="p">):</span> <span class="n">the</span> <span class="n">Intervals</span> <span class="n">to</span> <span class="n">add</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Intervals</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">newly</span> <span class="n">added</span> <span class="n">Intervals</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.intervals_del">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a9154c06682891562b886462747895203"></span><code class="descname">intervals_del</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.intervals_del" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Delete</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">intervals</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">intervals</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.block_names">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a66f046a892cb9f5d8611f9928c0ac4ee"></span><code class="descname">block_names</code><span class="sig-paren">(</span><em>self self</em>, <em>filter filter = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.block_names" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">names</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">sub</span><span class="o">-</span><span class="n">blocks</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">block</span> <span class="n">names</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.blocks">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a99c8976c959816bad74b040b2736196f"></span><code class="descname">blocks</code><span class="sig-paren">(</span><em>self self</em>, <em>names names</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">blocks</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">names</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">strings</span> <span class="k">with</span> <span class="n">the</span> <span class="n">block</span> <span class="n">names</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">dictionary</span> <span class="n">keyed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">names</span> <span class="n">whose</span> <span class="n">values</span> <span class="n">are</span> <span class="n">Block</span>
-    <span class="n">instances</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.block_get">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a60c9ac3c5ed44dad7d2be79705aad634"></span><code class="descname">block_get</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.block_get" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Block</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">requested</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.block_add">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a352384f46f207666f0f8638cc56b8c9f"></span><code class="descname">block_add</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em>, <em>blk blk = None</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.block_add" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">child</span> <span class="n">block</span> <span class="n">to</span> <span class="n">this</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">If</span> <span class="n">the</span> <span class="n">python</span> <span class="n">Block</span> <span class="n">instance</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">C</span><span class="o">++</span> <span class="n">handle</span> 
-<span class="n">associated</span> <span class="k">with</span> <span class="n">it</span><span class="p">,</span> <span class="n">then</span> <span class="n">a</span> <span class="n">new</span> <span class="n">C</span><span class="o">++</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">created</span> <span class="n">before</span> 
-<span class="n">adding</span> <span class="n">it</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">block</span><span class="o">.</span>
-    <span class="n">blk</span> <span class="p">(</span><span class="n">Block</span><span class="p">):</span> <span class="n">the</span> <span class="n">block</span> <span class="n">to</span> <span class="n">add</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Block</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">newly</span> <span class="n">added</span> <span class="n">child</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.block_del">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a14fc6e294b867a99440802a8d8b98757"></span><code class="descname">block_del</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.block_del" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Delete</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">sub</span><span class="o">-</span><span class="n">block</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">block</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">sub</span><span class="o">-</span><span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.select">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a161faa0a562b7da8a32f9397c4b6bf88"></span><code class="descname">select</code><span class="sig-paren">(</span><em>self self</em>, <em>filter filter = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.select" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Recursively</span> <span class="n">copy</span> <span class="n">the</span> <span class="n">current</span> <span class="n">block</span> <span class="ow">and</span> <span class="nb">all</span> <span class="n">descendents</span><span class="p">,</span>
-<span class="n">applying</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">matching</span> <span class="n">pattern</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="nb">filter</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">selection</span> <span class="n">string</span> <span class="n">to</span> <span class="n">apply</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">Block</span><span class="p">):</span>
-    <span class="n">a</span> <span class="n">Block</span> <span class="n">copy</span> <span class="k">with</span> <span class="n">a</span> <span class="n">pruned</span> <span class="n">tree</span> <span class="n">of</span> <span class="n">objects</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.block.Block.info">
-<span class="target" id="TIDASclasstidas_1_1block_1_1_block_1a64a6038213ce9b1a210a8f01e54afb00"></span><code class="descname">info</code><span class="sig-paren">(</span><em>self self</em>, <em>name name = &quot;&quot;</em>, <em>recurse recurse = True</em>, <em>indent indent = 2</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.block.Block.info" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Print</span> <span class="n">basic</span> <span class="n">information</span> <span class="n">about</span> <span class="n">this</span> <span class="n">block</span> <span class="n">to</span> <span class="n">stdout</span><span class="o">.</span>
-
-<span class="n">Mainly</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">debugging</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">this</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">parent</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1340,130 +589,52 @@ see those changes until the synchronization method is called.</p>
 <div class="section" id="id3">
 <h3>Python<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="tidas.mpi_volume.MPIVolume">
-<em class="property">class </em><code class="descclassname">tidas.mpi_volume.</code><code class="descname">MPIVolume</code><span class="sig-paren">(</span><em>comm</em>, <em>path</em>, <em>mode='r'</em>, <em>backend='hdf5'</em>, <em>comp='none'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which represents a TIDAS MPI volume.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>comm</strong> (<em>mpi4py.MPI.Comm</em>) &#8211; the communicator.</li>
-<li><strong>path</strong> (<em>string</em>) &#8211; filesystem location of the volume to open or create.</li>
-<li><strong>mode</strong> (<em>string</em>) &#8211; whether to open the file in read-only (&#8220;r&#8221;) or
-read-write (&#8220;w&#8221;) mode.  Default is read-only for
-opening existing files and read-write for file creation.</li>
-<li><strong>backend</strong> (<em>str</em>) &#8211; the backend format to use.</li>
-<li><strong>comp</strong> (<em>str</em>) &#8211; the compression type to use.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dt id="tidas.mpi.MPIVolume">
+<em class="property">class </em><code class="descclassname">tidas.mpi.</code><code class="descname">MPIVolume</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.mpi.MPIVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: tidas._pytidas_mpi.MPIVolume, arg0: object, arg1: str, arg2: tidas._pytidas.AccessMode) -&gt; None</li>
+<li>__init__(self: tidas._pytidas_mpi.MPIVolume, arg0: object, arg1: str, arg2: tidas._pytidas.BackendType, arg3: tidas._pytidas.CompressionType, arg4: Dict[str, str]) -&gt; None</li>
+</ol>
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Explicitly close the volume.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="tidas.mpi_volume.MPIVolume.comm">
-<code class="descname">comm</code><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.comm" title="Permalink to this definition">¶</a></dt>
-<dd><p>The mpi4py communicator.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="tidas.mpi_volume.MPIVolume.comm_rank">
-<code class="descname">comm_rank</code><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.comm_rank" title="Permalink to this definition">¶</a></dt>
-<dd><p>For convenience, the rank within the communicator.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="tidas.mpi_volume.MPIVolume.comm_size">
-<code class="descname">comm_size</code><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.comm_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>For convenience, the size of the communicator.</p>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.comm">
+<code class="descname">comm</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#tidas.mpi.MPIVolume.comm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.duplicate">
-<code class="descname">duplicate</code><span class="sig-paren">(</span><em>path</em>, <em>backend='hdf5'</em>, <em>comp='none'</em>, <em>selection=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.duplicate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Duplicate the volume to a new location.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; filesystem location of the volume copy.</li>
-<li><strong>backend</strong> (<em>str</em>) &#8211; the backend format to use.</li>
-<li><strong>comp</strong> (<em>str</em>) &#8211; the compression type to use.</li>
-<li><strong>selection</strong> (<em>str</em>) &#8211; a selection filter to apply to the tree of
-blocks.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.comm_rank">
+<code class="descname">comm_rank</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tidas.mpi.MPIVolume.comm_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>recurse=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print basic information about the root block to stdout.</p>
-<p>Mainly useful for debugging.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>recurse</strong> (<em>bool</em>) &#8211; if True, call recursively on child blocks.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.comm_size">
+<code class="descname">comm_size</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tidas.mpi.MPIVolume.comm_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.link">
-<code class="descname">link</code><span class="sig-paren">(</span><em>path</em>, <em>ltype='soft'</em>, <em>selection=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.link" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a linked copy of the volume.</p>
-<p>This will create a new volume where the properties file and all
-selected groups and intervals are links to the original.  If the
-original files are writeable, then these links will be as well.</p>
-<p>The metadata index is copied (not linked), so that new objects may
-be added locally.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; filesystem location of the volume copy.</li>
-<li><strong>ltype</strong> (<em>str</em>) &#8211; the link type to use (&#8220;soft&#8221; or &#8220;hard&#8221;).</li>
-<li><strong>selection</strong> (<em>str</em>) &#8211; a selection filter to apply to the tree of
-blocks.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume, arg0: str, arg1: tidas._pytidas.BackendType, arg2: tidas._pytidas.CompressionType, arg3: str, arg4: Dict[str, str]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.mpi.MPIVolume.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.meta_sync">
-<code class="descname">meta_sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.meta_sync"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.meta_sync" title="Permalink to this definition">¶</a></dt>
-<dd><p>Synchronize metadata across processes.</p>
-<p>All metadata transactions in memory across all processes are
-gathered to the root process and replayed in rank order.
-Afterwards, the full updated metadata is broadcast to all
-processes.</p>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.mpi.MPIVolume.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
-<dt id="tidas.mpi_volume.MPIVolume.root">
-<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/mpi_volume.html#MPIVolume.root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.mpi_volume.MPIVolume.root" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a reference to the root block.</p>
-<p>A new python Block is returned containing a pointer to the root
-block of the volume.  However, this python class does not manage
-the lifetime of the C++ pointer.  As long as the volume is open,
-the pointer held by these root block instances will also be valid.</p>
-</dd></dl>
+<dt id="tidas.mpi.MPIVolume.link">
+<code class="descname">link</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em>, <em>arg0: str</em>, <em>arg1: tidas._pytidas.LinkType</em>, <em>arg2: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.mpi.MPIVolume.link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.mpi.MPIVolume.meta_sync">
+<code class="descname">meta_sync</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.mpi.MPIVolume.meta_sync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tidas.mpi.MPIVolume.root">
+<code class="descname">root</code><span class="sig-paren">(</span><em>self: tidas._pytidas_mpi.MPIVolume</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Block<a class="headerlink" href="#tidas.mpi.MPIVolume.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -1472,191 +643,59 @@ the pointer held by these root block instances will also be valid.</p>
 <h3>C++<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt>
-<em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">mpi_volume</code></dt>
-<dd><div class="breathe-sectiondef container">
+<em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">mpi_volume</code><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt>
-<code class="descname">tidas::mpi_volume::mpi_volume(MPI_Comm comm, std::string const &amp; path, backend_type type, compression_type comp, std::map&lt; std::string, std::string &gt; extra = std::map&lt; std::string, std::string &gt;())</code></dt>
+<code class="descname">mpi_volume</code><span class="sig-paren">(</span>MPI_Comm <em>comm</em>, std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_typeE" title="tidas::backend_type">backend_type</a> <em>type</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas16compression_typeE" title="tidas::compression_type">compression_type</a> <em>comp</em>, std::map&lt;std::string, std::string&gt; <em>extra</em> = std::map&lt; std::string, std::string &gt;()<span class="sig-paren">)</span><br /></dt>
 <dd><p>Create a new volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">mpi_volume</code><span class="sig-paren">(</span>MPI_Comm <em>comm</em>, std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas11access_modeE" title="tidas::access_mode">access_mode</a> <em>mode</em>, std::string <em class="property">const</em> &amp;<em>dist</em> = &quot;&quot;<span class="sig-paren">)</span></dt>
+<code class="descname">mpi_volume</code><span class="sig-paren">(</span>MPI_Comm <em>comm</em>, std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas11access_modeE" title="tidas::access_mode">access_mode</a> <em>mode</em>, std::string <em class="property">const</em> &amp;<em>dist</em> = &quot;&quot;<span class="sig-paren">)</span><br /></dt>
 <dd><p>Open an existing volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descname">void tidas::mpi_volume::duplicate(std::string const &amp; path, backend_type type, compression_type comp, std::string const &amp; filter = &quot;&quot;, std::map&lt; std::string, std::string &gt; extra = std::map&lt; std::string, std::string &gt;())</code> const</dt>
+void <code class="descname">duplicate</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_typeE" title="tidas::backend_type">backend_type</a> <em>type</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas16compression_typeE" title="tidas::compression_type">compression_type</a> <em>comp</em>, std::string <em class="property">const</em> &amp;<em>filter</em> = &quot;&quot;, std::map&lt;std::string, std::string&gt; <em>extra</em> = std::map&lt; std::string, std::string &gt;()<span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Export a filtered subset of the volume to a new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-void <code class="descname">link</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> const</dt>
+void <code class="descname">link</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>path</em>, link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Create a (hard or soft) linked filtered subset of the volume to a new location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-void <code class="descname">wipe</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> const</dt>
+void <code class="descname">wipe</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>filter</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Delete the on-disk data and metadata associated with this object. </p>
 <p>In-memory metadata is not modified. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the root block of the volume. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const</dt>
+<a class="reference internal" href="#_CPPv2N5tidas5blockE" title="tidas::block">block</a> <em class="property">const</em> &amp;<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
 <dd><p>Get the (const) root block of the volume. </p>
 </dd></dl>
 
-</div>
-<dl class="class">
-<dt>
-<em class="property">class </em><code class="descname">MPIVolume</code></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">which</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">TIDAS</span> <span class="n">MPI</span> <span class="n">volume</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">comm</span> <span class="p">(</span><span class="n">mpi4py</span><span class="o">.</span><span class="n">MPI</span><span class="o">.</span><span class="n">Comm</span><span class="p">):</span> <span class="n">the</span> <span class="n">communicator</span><span class="o">.</span>
-    <span class="n">path</span> <span class="p">(</span><span class="n">string</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">to</span> <span class="nb">open</span> <span class="ow">or</span> <span class="n">create</span><span class="o">.</span>
-    <span class="n">mode</span> <span class="p">(</span><span class="n">string</span><span class="p">):</span> <span class="n">whether</span> <span class="n">to</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="ow">or</span>
-                   <span class="n">read</span><span class="o">-</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="n">mode</span><span class="o">.</span>  <span class="n">Default</span> <span class="ow">is</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="k">for</span> 
-                   <span class="n">opening</span> <span class="n">existing</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">read</span><span class="o">-</span><span class="n">write</span> <span class="k">for</span> <span class="n">file</span> <span class="n">creation</span><span class="o">.</span>
-    <span class="n">backend</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">backend</span> <span class="nb">format</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">comp</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">compression</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-<p>Inherits from object</p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt>
-<code class="descname">close</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Explicitly</span> <span class="n">close</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">comm</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">mpi4py</span> <span class="n">communicator</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">comm_rank</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">convenience</span><span class="p">,</span> <span class="n">the</span> <span class="n">rank</span> <span class="n">within</span> <span class="n">the</span> <span class="n">communicator</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">comm_size</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">For</span> <span class="n">convenience</span><span class="p">,</span> <span class="n">the</span> <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">communicator</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">duplicate</code><span class="sig-paren">(</span><em>self self</em>, <em>path path</em>, <em>backend backend = &quot;hdf5&quot;</em>, <em>comp comp = &quot;none&quot;</em>, <em>selection selection = &quot;&quot;</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Duplicate</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">to</span> <span class="n">a</span> <span class="n">new</span> <span class="n">location</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">path</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">copy</span><span class="o">.</span>
-    <span class="n">backend</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">backend</span> <span class="nb">format</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">comp</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">compression</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
-    <span class="n">selection</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">a</span> <span class="n">selection</span> <span class="nb">filter</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">the</span> <span class="n">tree</span> <span class="n">of</span>
-<span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">link</code><span class="sig-paren">(</span><em>self self</em>, <em>path path</em>, <em>ltype ltype = &quot;soft&quot;</em>, <em>selection selection = &quot;&quot;</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="n">linked</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">volume</span> <span class="n">where</span> <span class="n">the</span> <span class="n">properties</span> <span class="n">file</span> <span class="ow">and</span> <span class="nb">all</span>
-<span class="n">selected</span> <span class="n">groups</span> <span class="ow">and</span> <span class="n">intervals</span> <span class="n">are</span> <span class="n">links</span> <span class="n">to</span> <span class="n">the</span> <span class="n">original</span><span class="o">.</span>  <span class="n">If</span> <span class="n">the</span>
-<span class="n">original</span> <span class="n">files</span> <span class="n">are</span> <span class="n">writeable</span><span class="p">,</span> <span class="n">then</span> <span class="n">these</span> <span class="n">links</span> <span class="n">will</span> <span class="n">be</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span>
-
-<span class="n">The</span> <span class="n">metadata</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">copied</span> <span class="p">(</span><span class="ow">not</span> <span class="n">linked</span><span class="p">),</span> <span class="n">so</span> <span class="n">that</span> <span class="n">new</span> <span class="n">objects</span> <span class="n">may</span>
-<span class="n">be</span> <span class="n">added</span> <span class="n">locally</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">path</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">filesystem</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">copy</span><span class="o">.</span>
-    <span class="n">ltype</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">link</span> <span class="nb">type</span> <span class="n">to</span> <span class="n">use</span> <span class="p">(</span><span class="s2">&quot;soft&quot;</span> <span class="ow">or</span> <span class="s2">&quot;hard&quot;</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">selection</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">a</span> <span class="n">selection</span> <span class="nb">filter</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">the</span> <span class="n">tree</span> <span class="n">of</span>
-<span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">meta_sync</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Synchronize</span> <span class="n">metadata</span> <span class="n">across</span> <span class="n">processes</span><span class="o">.</span>
-
-<span class="n">All</span> <span class="n">metadata</span> <span class="n">transactions</span> <span class="ow">in</span> <span class="n">memory</span> <span class="n">across</span> <span class="nb">all</span> <span class="n">processes</span> <span class="n">are</span>
-<span class="n">gathered</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span> <span class="n">process</span> <span class="ow">and</span> <span class="n">replayed</span> <span class="ow">in</span> <span class="n">rank</span> <span class="n">order</span><span class="o">.</span>
-<span class="n">Afterwards</span><span class="p">,</span> <span class="n">the</span> <span class="n">full</span> <span class="n">updated</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="n">broadcast</span> <span class="n">to</span> <span class="nb">all</span>
-<span class="n">processes</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">info</code><span class="sig-paren">(</span><em>self self</em>, <em>recurse recurse = True</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Print</span> <span class="n">basic</span> <span class="n">information</span> <span class="n">about</span> <span class="n">the</span> <span class="n">root</span> <span class="n">block</span> <span class="n">to</span> <span class="n">stdout</span><span class="o">.</span>
-
-<span class="n">Mainly</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">debugging</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">recurse</span> <span class="p">(</span><span class="nb">bool</span><span class="p">):</span> <span class="k">if</span> <span class="kc">True</span><span class="p">,</span> <span class="n">call</span> <span class="n">recursively</span> <span class="n">on</span> <span class="n">child</span> <span class="n">blocks</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="descname">root</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">a</span> <span class="n">reference</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span> <span class="n">block</span><span class="o">.</span>
-    
-<span class="n">A</span> <span class="n">new</span> <span class="n">python</span> <span class="n">Block</span> <span class="ow">is</span> <span class="n">returned</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span>
-<span class="n">block</span> <span class="n">of</span> <span class="n">the</span> <span class="n">volume</span><span class="o">.</span>  <span class="n">However</span><span class="p">,</span> <span class="n">this</span> <span class="n">python</span> <span class="k">class</span> <span class="nc">does</span> <span class="ow">not</span> <span class="n">manage</span>
-<span class="n">the</span> <span class="n">lifetime</span> <span class="n">of</span> <span class="n">the</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span><span class="o">.</span>  <span class="n">As</span> <span class="n">long</span> <span class="k">as</span> <span class="n">the</span> <span class="n">volume</span> <span class="ow">is</span> <span class="nb">open</span><span class="p">,</span>
-<span class="n">the</span> <span class="n">pointer</span> <span class="n">held</span> <span class="n">by</span> <span class="n">these</span> <span class="n">root</span> <span class="n">block</span> <span class="n">instances</span> <span class="n">will</span> <span class="n">also</span> <span class="n">be</span> <span class="n">valid</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
+void <code class="descname">info</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>Print info to a stream. </p>
 </dd></dl>
 
 </div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1679,7 +718,7 @@ void <code class="descname">wipe</code><span class="sig-paren">(</span>std::stri
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2017, Theodore Kisner.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
     </div>
   </body>
 </html>

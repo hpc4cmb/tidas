@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Utilities &#8212; TIDAS 0.2.0.dev138
+    <title>Utilities &#8212; TIDAS 0.3.0
  documentation</title>
     
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
@@ -15,27 +15,25 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0.dev138
-',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="TIDAS 0.2.0.dev138
- documentation" href="index.html" />
     <link rel="next" title="Developer Documentation" href="dev.html" />
     <link rel="prev" title="Data Selection" href="selection.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><img class="rightlogo" src="_static/tidas_logo_small.png" alt="Logo"/><h1 class="heading"><a href="index.html">
-          <span>TIDAS 0.2.0.dev138
+          <span>TIDAS 0.3.0
  documentation</span></a></h1>
         <h2 class="heading"><span>Utilities</span></h2>
       </div>
@@ -61,76 +59,76 @@
 <p>The TIDAS dictionary class exists mainly to provide a strongly typed implementation that can be read / written by a backend implementation.  In the Python API, all classes / functions just use normal python dictionaries and these are converted under the hood to a C++ TIDAS dictionary.</p>
 <dl class="class">
 <dt id="_CPPv2N5tidas4dictE">
-<span id="tidas::dict"></span><span class="target" id="TIDASclasstidas_1_1dict"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">dict</code><a class="headerlink" href="#_CPPv2N5tidas4dictE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::dict"></span><span class="target" id="classtidas_1_1dict"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">dict</code><a class="headerlink" href="#_CPPv2N5tidas4dictE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This dictionary class stores values of multiple fixed types. </p>
 <p>The type of each value is recorded and the value is stored as a string. The stored values are converted back on retrieval. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4dictEv">
-<span id="tidas::dict::dict"></span><span class="target" id="TIDASclasstidas_1_1dict_1a9809f5bc0ec70341ae8ee09284d04fa0"></span><code class="descname">dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4dictEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4dictEv">
+<span id="dict::dict"></span><span class="target" id="classtidas_1_1dict_1af92208fa49f7ff889e84345935c57cc3"></span><code class="descname">dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4dictEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default constructor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dictD0Ev">
-<span id="tidas::dict::~dict"></span><span class="target" id="TIDASclasstidas_1_1dict_1a1dc35e32f3fa29fba6b1e7efb9c5d0fe"></span><code class="descname">~dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dictD0Ev" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dictD0Ev">
+<span id="dict::~dict"></span><span class="target" id="classtidas_1_1dict_1a9e8695e1c2262e13729140da12b15719"></span><code class="descname">~dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dictD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dictaSER4dict">
-<span id="tidas::dict::assign-operator__dictCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a691f5caf53d6437e3d8f9621c5dc346b"></span><a class="reference internal" href="#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dictaSER4dict" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dictaSER4dict">
+<span id="dict::assign-operator__dictCR"></span><span class="target" id="classtidas_1_1dict_1a4475b13f7c4c1449a02e6ab86624563a"></span>dict &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>dict <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dictaSER4dict" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Assignment operator. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4dictER4dict">
-<span id="tidas::dict::dict__dictCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a51fe1ce4d5514263ceb40d0a309954e1"></span><code class="descname">dict</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas4dict4dictEv" title="tidas::dict::dict">dict</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4dictER4dict" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4dictER4dict">
+<span id="dict::dict__dictCR"></span><span class="target" id="classtidas_1_1dict_1a17d995e934df8aa75dbfd865c7dc99a2"></span><code class="descname">dict</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4dict4dictEv" title="dict::dict">dict</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4dictER4dict" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy constructor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4dictER12backend_path">
-<span id="tidas::dict::dict__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a9a4bec1904482467e4dd57f82f92ffc3"></span><code class="descname">dict</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4dictER12backend_path" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4dictER12backend_path">
+<span id="dict::dict__backend_pathCR"></span><span class="target" id="classtidas_1_1dict_1afa95b3c210429b0070407e090eda2064"></span><code class="descname">dict</code><span class="sig-paren">(</span>backend_path <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4dictER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Load the dictionary from an existing location. </p>
 <p>All meta data operations will apply to this location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4dictER4dictRNSt6stringER12backend_path">
-<span id="tidas::dict::dict__dictCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a8f432f7d1a341f41de01c56cf0d8bb83"></span><code class="descname">dict</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas4dict4dictEv" title="tidas::dict::dict">dict</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4dictER4dictRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4dictER4dictRNSt6stringER12backend_path">
+<span id="dict::dict__dictCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1dict_1ac29d68ffefa491247e95dbc1c264e352"></span><code class="descname">dict</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4dict4dictEv" title="dict::dict">dict</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, backend_path <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4dictER4dictRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy from an existing dictionary. </p>
 <p>Apply an optional filter to elements and relocate to a new location. If a filter is given, a new location must be specified. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict8relocateER12backend_path">
-<span id="tidas::dict::relocate__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a9bb3cad91d151ecb50b91a4298a07ae6"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict8relocateER12backend_path" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict8relocateER12backend_path">
+<span id="dict::relocate__backend_pathCR"></span><span class="target" id="classtidas_1_1dict_1ab2f52388a37b36e91f0a165384b0e6df"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span>backend_path <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict8relocateER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Change the location of the dictionary. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4syncEv">
-<span id="tidas::dict::sync"></span><span class="target" id="TIDASclasstidas_1_1dict_1ae22e192ac7d7ce0008d96ef5b8323f61"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4syncEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4syncEv">
+<span id="dict::sync"></span><span class="target" id="classtidas_1_1dict_1aeb625aa9720e5ac09728791833983f73"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4syncEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Reload metadata from the current location, overwriting the current state in memory. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict5flushEv">
-<span id="tidas::dict::flush"></span><span class="target" id="TIDASclasstidas_1_1dict_1ad63a6339046d235d03242f0e6f89ac2a"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas4dict5flushEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK4dict5flushEv">
+<span id="dict::flushC"></span><span class="target" id="classtidas_1_1dict_1a66e5ee914a39abb67513c755c591a890"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4dict5flushEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Write metadata to the current location, overwriting the information at that location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4copyER4dictRNSt6stringER12backend_path">
-<span id="tidas::dict::copy__dictCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a861b0f1fb22f21191981ef1eea3126d5"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict4copyER4dictRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict4copyER4dictRNSt6stringER12backend_path">
+<span id="dict::copy__dictCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1dict_1aedc112761323da39e05750960818205b"></span>void <code class="descname">copy</code><span class="sig-paren">(</span>dict <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, backend_path <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict4copyER4dictRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy with optional selection and relocation. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict8locationEv">
-<span id="tidas::dict::location"></span><span class="target" id="TIDASclasstidas_1_1dict_1a031d022f565fb55c360b8487b82a2138"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas4dict8locationEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK4dict8locationEv">
+<span id="dict::locationC"></span><span class="target" id="classtidas_1_1dict_1a06561216acd8bbdf8a52ec6d8f101e32"></span>backend_path <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4dict8locationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) The current location. </p>
 </dd></dl>
 
@@ -138,33 +136,39 @@
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
 <dt id="_CPPv2N5tidas4dict3putERNSt6stringER1T">
-<span id="tidas::dict::put__ssCR.TCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1a4506fa832401cdc0a4c90736a5324e6f"></span>void <code class="descname">put</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>key</em>, T <em class="property">const</em> &amp;<em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict3putERNSt6stringER1T" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::dict::put__ssCR.TCR"></span><span class="target" id="classtidas_1_1dict_1a4506fa832401cdc0a4c90736a5324e6f"></span>void <code class="descname">put</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>key</em>, T <em class="property">const</em> &amp;<em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict3putERNSt6stringER1T" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Insert a value into the dictionary with the specified key. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
-<dt id="_CPPv2N5tidas4dict3getERNSt6stringE">
-<span id="tidas::dict::get__ssCR"></span><span class="target" id="TIDASclasstidas_1_1dict_1aed1ab11138c74630c019bd9c9b568125"></span>T <code class="descname">get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>key</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas4dict3getERNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas4dict3getERNSt6stringE">
+<span id="tidas::dict::get__ssCRC"></span><span class="target" id="classtidas_1_1dict_1a809e16cd0722e24058aa08cc01849dc5"></span>T <code class="descname">get</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>key</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas4dict3getERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a value from the dictionary with the specified key. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict5clearEv">
-<span id="tidas::dict::clear"></span><span class="target" id="TIDASclasstidas_1_1dict_1a8270e8a464b176b9e8c4842e8fdc6804"></span>void <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas4dict5clearEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N4dict5clearEv">
+<span id="dict::clear"></span><span class="target" id="classtidas_1_1dict_1a9d8c252449043e4dc4e6929345937d74"></span>void <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4dict5clearEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Clear all elements of the dictionary. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict4dataEv">
-<span id="tidas::dict::data"></span><span class="target" id="TIDASclasstidas_1_1dict_1a09e6cc7220eae845726b8747d8540b16"></span>std::map&lt;std::string, std::string&gt; <em class="property">const</em> &amp;<code class="descname">data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas4dict4dataEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK4dict4keysEv">
+<span id="dict::keysC"></span><span class="target" id="classtidas_1_1dict_1a0e84fba5bf60aed2868e664ba57c373a"></span>std::vector&lt;std::string&gt; <code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4dict4keysEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a list of keys in the dictionary. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4dict4dataEv">
+<span id="dict::dataC"></span><span class="target" id="classtidas_1_1dict_1a8c0030c088960630319fdad2c64b00bf"></span>std::map&lt;std::string, std::string&gt; <em class="property">const</em> &amp;<code class="descname">data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4dict4dataEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a const reference to the underlying data map. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas4dict5typesEv">
-<span id="tidas::dict::types"></span><span class="target" id="TIDASclasstidas_1_1dict_1a5f1b1d365d1b8657144c4dee23925e82"></span>std::map&lt;std::string, <a class="reference internal" href="dev.html#_CPPv2N5tidas9data_typeE" title="tidas::data_type">data_type</a>&gt; <em class="property">const</em> &amp;<code class="descname">types</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas4dict5typesEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK4dict5typesEv">
+<span id="dict::typesC"></span><span class="target" id="classtidas_1_1dict_1a90a966540769dfad2055e520af5dc67e"></span>std::map&lt;std::string, data_type&gt; <em class="property">const</em> &amp;<code class="descname">types</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4dict5typesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a const reference to the underlying data type map. </p>
 </dd></dl>
 
@@ -177,19 +181,19 @@
 <p>In Python, there are already extensive tools for easy manipulation of the filesystem.  These C++ tools are used internally but might also be useful for application developers, which is why they are documented here.</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas7fs_statEPc">
-<span id="tidas::fs_stat__cCP"></span><span class="target" id="TIDASutils_8hpp_1aeda7efb932360855c92d94963d89ae99"></span>int64_t <code class="descclassname">tidas::</code><code class="descname">fs_stat</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas7fs_statEPc" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::fs_stat__cCP"></span><span class="target" id="utils_8hpp_1aeda7efb932360855c92d94963d89ae99"></span>int64_t <code class="descclassname">tidas::</code><code class="descname">fs_stat</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas7fs_statEPc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the size of the specified file. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5fs_rmEPc">
-<span id="tidas::fs_rm__cCP"></span><span class="target" id="TIDASutils_8hpp_1a55670c915181af00e6c00e7e0b0227d3"></span>void <code class="descclassname">tidas::</code><code class="descname">fs_rm</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5fs_rmEPc" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::fs_rm__cCP"></span><span class="target" id="utils_8hpp_1a55670c915181af00e6c00e7e0b0227d3"></span>void <code class="descclassname">tidas::</code><code class="descname">fs_rm</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5fs_rmEPc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove the specified file. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas8fs_mkdirEPc">
-<span id="tidas::fs_mkdir__cCP"></span><span class="target" id="TIDASutils_8hpp_1af7c802559ca405a1ec5a79cf1e463edf"></span>void <code class="descclassname">tidas::</code><code class="descname">fs_mkdir</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas8fs_mkdirEPc" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::fs_mkdir__cCP"></span><span class="target" id="utils_8hpp_1af7c802559ca405a1ec5a79cf1e463edf"></span>void <code class="descclassname">tidas::</code><code class="descname">fs_mkdir</code><span class="sig-paren">(</span>char <em class="property">const</em> *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas8fs_mkdirEPc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Make the specified directory. </p>
 </dd></dl>
 
@@ -212,7 +216,7 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2017, Theodore Kisner.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &#8212; TIDAS 0.2.0.dev138
+    <title>Installation &#8212; TIDAS 0.3.0
  documentation</title>
     
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
@@ -15,27 +15,25 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0.dev138
-',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="TIDAS 0.2.0.dev138
- documentation" href="index.html" />
     <link rel="next" title="Examples" href="example.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><img class="rightlogo" src="_static/tidas_logo_small.png" alt="Logo"/><h1 class="heading"><a href="index.html">
-          <span>TIDAS 0.2.0.dev138
+          <span>TIDAS 0.3.0
  documentation</span></a></h1>
         <h2 class="heading"><span>Installation</span></h2>
       </div>
@@ -73,32 +71,23 @@ several common python packages:</p>
 <p>For mpi4py, ensure that this package is compatible with the MPI C++ compiler
 used during TIDAS installation.  There are obviously several ways to meet these python requirements.  Your OS package manager may already provide these, or you might use an external Python distribution (e.g. Anaconda).</p>
 </div>
-<div class="section" id="using-configure">
-<h2>Using Configure<a class="headerlink" href="#using-configure" title="Permalink to this headline">¶</a></h2>
-<p>TIDAS uses autotools to configure, build, and install both the compiled code
-and the python tools.  If you are running from a git checkout (instead of a
-distribution tarball), then first do:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="o">./</span><span class="n">autogen</span><span class="o">.</span><span class="n">sh</span>
+<div class="section" id="cmake-build-system">
+<h2>CMake Build System<a class="headerlink" href="#cmake-build-system" title="Permalink to this headline">¶</a></h2>
+<p>TIDAS uses cmake to build and install both the compiled code and the python bindings.  You should use an out-of-source build.  For example, make a top-level &#8220;build&#8221; directory and run cmake from there:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">mkdir</span> <span class="n">build</span>
+<span class="o">%&gt;</span> <span class="n">cd</span> <span class="n">build</span>
+<span class="o">%&gt;</span> <span class="n">cmake</span> <span class="o">..</span>
+<span class="o">%&gt;</span> <span class="n">make</span> <span class="o">-</span><span class="n">j</span> <span class="mi">4</span>
 </pre></div>
 </div>
-<p>Now run configure:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">install</span>
+<p>In practice, there are likely other options you want to pass to cmake.  The &#8220;platforms&#8221; directory contains several examples of running cmake.  For example, to use the ubuntu gcc example and install to $HOME/software, one could do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>%&gt; mkdir build
+%&gt; cd build
+%&gt; ../platforms/ubuntu-gcc.sh -DCMAKE_INSTALL_PREFIX=$HOME/software
+%&gt; make -j 4
+%&gt; make install
 </pre></div>
 </div>
-<p><strong>NOTE</strong>: if you have both a &#8220;python&#8221; and a &#8220;python3&#8221; executable (and they are different), and you want to use python3, be sure to specify the python to use at configure time:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">PYTHON</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">install</span>
-</pre></div>
-</div>
-<p>Run configure with the &#8220;&#8211;help&#8221; option to see all available options.  See the top-level &#8220;platforms&#8221; directory for other examples of running the
-configure script.  Now build and install the tools:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">make</span>
-<span class="o">%&gt;</span> <span class="n">make</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>In order to use the installed tools, you must make sure that the installed
-location has been added to the search paths for your shell.  For example,
-the &#8220;&lt;prefix&gt;/bin&#8221; directory should be in your PATH and the python install
-location &#8220;&lt;prefix&gt;/lib/pythonX.X/site-packages&#8221; should be in your PYTHONPATH.</p>
 </div>
 <div class="section" id="testing-the-installation">
 <h2>Testing the Installation<a class="headerlink" href="#testing-the-installation" title="Permalink to this headline">¶</a></h2>
@@ -111,11 +100,11 @@ location &#8220;&lt;prefix&gt;/lib/pythonX.X/site-packages&#8221; should be in y
 </pre></div>
 </div>
 <p>You can test the Python bindings in a similar way:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import tidas; tidas.test()&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import tidas.test; tidas.test.run()&quot;</span>
 </pre></div>
 </div>
 <p>and:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">mpirun</span> <span class="o">-</span><span class="n">np</span> <span class="mi">4</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import tidas; tidas.test_mpi()&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%&gt;</span> <span class="n">mpirun</span> <span class="o">-</span><span class="n">np</span> <span class="mi">4</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import tidas.test; tidas.test.run_mpi()&quot;</span>
 </pre></div>
 </div>
 <p>Some of the above commands will create temporary output directories in your current working directory.</p>
@@ -138,7 +127,7 @@ location &#8220;&lt;prefix&gt;/lib/pythonX.X/site-packages&#8221; should be in y
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2017, Theodore Kisner.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
     </div>
   </body>
 </html>

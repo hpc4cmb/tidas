@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Groups &#8212; TIDAS 0.2.0.dev138
+    <title>Groups &#8212; TIDAS 0.3.0
  documentation</title>
     
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
@@ -15,27 +15,25 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0.dev138
-',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="TIDAS 0.2.0.dev138
- documentation" href="index.html" />
     <link rel="next" title="Intervals" href="intervals.html" />
     <link rel="prev" title="Volumes" href="volume.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><img class="rightlogo" src="_static/tidas_logo_small.png" alt="Logo"/><h1 class="heading"><a href="index.html">
-          <span>TIDAS 0.2.0.dev138
+          <span>TIDAS 0.3.0
  documentation</span></a></h1>
         <h2 class="heading"><span>Groups</span></h2>
       </div>
@@ -60,167 +58,61 @@
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="tidas.Group">
-<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>schema={}</em>, <em>size=0</em>, <em>props={}</em>, <em>handle=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which represents a TIDAS group.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>schema</strong> (<em>dict</em>) &#8211; dictionary of fields and their types and units to
-create in the group.  Example:
-{ &#8220;field1&#8221; : (&#8220;uint16&#8221;, &#8220;counts&#8221;),
-&#8220;field2&#8221; : (&#8220;double&#8221;, &#8220;volts&#8221;) }</li>
-<li><strong>size</strong> (<em>long</em>) &#8211; number of samples in the group.</li>
-<li><strong>props</strong> (<em>dict</em>) &#8211; (optional) a dictionary of properties to associate
-with the group.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><code class="descclassname">tidas.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.Group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: tidas._pytidas.Group) -&gt; None</li>
+<li>__init__(self: tidas._pytidas.Group, arg0: tidas._pytidas.Schema, arg1: tidas._pytidas.Dictionary, arg2: int) -&gt; None</li>
+</ol>
 <dl class="method">
-<dt id="tidas.Group.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Explicitly close the group (free the underlying C++ pointer).</p>
-</dd></dl>
+<dt id="tidas.Group.dictionary">
+<code class="descname">dictionary</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Dictionary<a class="headerlink" href="#tidas.Group.dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>name</em>, <em>indent=2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print basic information about this group to stdout.</p>
-<p>Mainly useful for debugging.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; the name of this group in the parent block.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="tidas.Group.props">
-<code class="descname">props</code><a class="headerlink" href="#tidas.Group.props" title="Permalink to this definition">¶</a></dt>
-<dd><p>The dictionary of properties set at construction time.</p>
-</dd></dl>
+<code class="descname">info</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: std::ostream</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Group.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.range">
-<code class="descname">range</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.range" title="Permalink to this definition">¶</a></dt>
-<dd><p>The start / stop of the group&#8217;s time field.</p>
-<dl class="docutils">
-<dt>Returns (tuple):</dt>
-<dd>the start and stop times.</dd>
-</dl>
-</dd></dl>
+<code class="descname">range</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em><span class="sig-paren">)</span> &#x2192; Tuple[float, float]<a class="headerlink" href="#tidas.Group.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.read">
-<code class="descname">read</code><span class="sig-paren">(</span><em>field</em>, <em>offset</em>, <em>ndata</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read data from the specified field.</p>
-<p>Data is read for the specified sample range and returned as a
-numpy array with a dtype that matches the underlying data type.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>field</strong> (<em>str</em>) &#8211; name of the field to read.</li>
-<li><strong>offset</strong> (<em>int</em>) &#8211; the first sample to read.</li>
-<li><strong>ndata</strong> (<em>int</em>) &#8211; the number of samples to read.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Returns (array):</dt>
-<dd>the data for the field.</dd>
-</dl>
-</dd></dl>
+<code class="descname">read</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: str</em>, <em>arg1: int</em>, <em>arg2: int</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#tidas.Group.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.read_times">
-<code class="descname">read_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.read_times"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.read_times" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read the full time vector.</p>
-<p>This reads the full timestamps for the group.</p>
-<dl class="docutils">
-<dt>Returns (array):</dt>
-<dd>the timestamps as a numpy float64 array.</dd>
-</dl>
-</dd></dl>
+<code class="descname">read_times</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: int</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64]<a class="headerlink" href="#tidas.Group.read_times" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><em>newsize</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.resize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change the size of the group.</p>
-<p>This will resize the underlying on-disk storage and may be expensive,
-depending on the details of the backend format.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newsize</strong> (<em>int</em>) &#8211; the new size of the group.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">resize</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Group.resize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="tidas.Group.schema">
-<code class="descname">schema</code><a class="headerlink" href="#tidas.Group.schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>The schema of the group.  This is a dictionary keyed on the field
-names whose values are a 2-tuple containing the datatype and units
-of the field.</p>
-</dd></dl>
+<code class="descname">schema</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em><span class="sig-paren">)</span> &#x2192; tidas._pytidas.Schema<a class="headerlink" href="#tidas.Group.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="tidas.Group.size">
-<code class="descname">size</code><a class="headerlink" href="#tidas.Group.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of samples in the group.</p>
-</dd></dl>
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tidas.Group.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>field</em>, <em>offset</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write data to the specified field.</p>
-<p>Data is written for the specified sample range and the provided numpy
-array must have a dtype that is compatible with the C/C++ interface
-for the field type.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>field</strong> (<em>str</em>) &#8211; name of the field to write.</li>
-<li><strong>offset</strong> (<em>int</em>) &#8211; the first sample to write.</li>
-<li><strong>data</strong> (<em>array</em>) &#8211; the data to write</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing.</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">write</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: str</em>, <em>arg1: int</em>, <em>arg2: buffer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Group.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tidas.Group.write_times">
-<code class="descname">write_times</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tidas/group.html#Group.write_times"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tidas.Group.write_times" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write the full time vector.</p>
-<p>This writes the full timestamps for the group.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>array</em>) &#8211; the timestamps as a numpy float64 array.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<code class="descname">write_times</code><span class="sig-paren">(</span><em>self: tidas._pytidas.Group</em>, <em>arg0: int</em>, <em>arg1: buffer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tidas.Group.write_times" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -229,152 +121,172 @@ for the field type.</p>
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="_CPPv2N5tidas5groupE">
-<span id="tidas::group"></span><span class="target" id="TIDASclasstidas_1_1group"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">group</code><a class="headerlink" href="#_CPPv2N5tidas5groupE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group"></span><span class="target" id="classtidas_1_1group"></span><em class="property">class </em><code class="descclassname">tidas::</code><code class="descname">group</code><a class="headerlink" href="#_CPPv2N5tidas5groupE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A group represents a collection of timestreams which are sampled consistently (they have the same number of samples). </p>
 <p>The list of fields and their types (the schema) is set at construction time. The number of samples in the group may be altered, although this should be done with care since it may be an expensive filesystem operation. A group has an optional dictionary associated with it at construction time. Some public methods are only used internally and are not needed for normal use of the object. These are labelled &#8220;internal&#8221;. </p>
-<div class="breathe-sectiondef container">
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N5tidas5group5groupEv">
-<span id="tidas::group::group"></span><span class="target" id="TIDASclasstidas_1_1group_1ab72681fcc9ccef977f11c87ae1b78a5e"></span><code class="descname">group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::group"></span><span class="target" id="classtidas_1_1group_1ab72681fcc9ccef977f11c87ae1b78a5e"></span><code class="descname">group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default constructor. The backend is set to be memory based. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group5groupER6schemaR4dictR6size_t">
-<span id="tidas::group::group__schemaCR.dictCR.sCR"></span><span class="target" id="TIDASclasstidas_1_1group_1a791af4ad1d710ee89441cae5efa6c6ba"></span><code class="descname">group</code><span class="sig-paren">(</span>schema <em class="property">const</em> &amp;<em>schm</em>, <a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>d</em>, size_t <em class="property">const</em> &amp;<em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER6schemaR4dictR6size_t" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::group__schemaCR.dictCR.sCR"></span><span class="target" id="classtidas_1_1group_1a791af4ad1d710ee89441cae5efa6c6ba"></span><code class="descname">group</code><span class="sig-paren">(</span>schema <em class="property">const</em> &amp;<em>schm</em>, <a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<em>d</em>, size_t <em class="property">const</em> &amp;<em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER6schemaR4dictR6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Constructor with specified schema, dictionary, and number of samples. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5groupD0Ev">
-<span id="tidas::group::~group"></span><span class="target" id="TIDASclasstidas_1_1group_1ad9facfa269fbdf9d4271d83c5fc1898e"></span><code class="descname">~group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5groupD0Ev" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::~group"></span><span class="target" id="classtidas_1_1group_1ad9facfa269fbdf9d4271d83c5fc1898e"></span><code class="descname">~group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5groupD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5groupaSER5group">
-<span id="tidas::group::assign-operator__groupCR"></span><span class="target" id="TIDASclasstidas_1_1group_1ad37ec19e6cf6cd85b9bc499356de67f7"></span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5groupaSER5group" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::assign-operator__groupCR"></span><span class="target" id="classtidas_1_1group_1ad37ec19e6cf6cd85b9bc499356de67f7"></span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5groupaSER5group" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Assignment operator. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group5groupER5group">
-<span id="tidas::group::group__groupCR"></span><span class="target" id="TIDASclasstidas_1_1group_1ae8a36a4a674841f9fe841168be594753"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5group5groupEv" title="tidas::group::group">group</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER5group" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::group__groupCR"></span><span class="target" id="classtidas_1_1group_1ae8a36a4a674841f9fe841168be594753"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5group5groupEv" title="tidas::group::group">group</a> <em class="property">const</em> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER5group" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy constructor. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group5groupER12backend_path">
-<span id="tidas::group::group__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1group_1a23239b68018f652cfc60b2113f35d6a3"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::group__backend_pathCR"></span><span class="target" id="classtidas_1_1group_1a23239b68018f652cfc60b2113f35d6a3"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Load the group from the specified location. </p>
 <p>All meta data operations will apply to this location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group5groupER5groupRNSt6stringER12backend_path">
-<span id="tidas::group::group__groupCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1group_1abbad73989708dd92ed2cd3a107ed6c32"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5group5groupEv" title="tidas::group::group">group</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER5groupRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::group__groupCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1group_1abbad73989708dd92ed2cd3a107ed6c32"></span><code class="descname">group</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5group5groupEv" title="tidas::group::group">group</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group5groupER5groupRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy from an existing group. </p>
 <p>Apply an optional filter to elemetns and relocate to a new location. If a filter is given, a new location must be specified. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group8relocateER12backend_path">
-<span id="tidas::group::relocate__backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1group_1a5e62d505cd1427d65b967cdda4831e87"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group8relocateER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::relocate__backend_pathCR"></span><span class="target" id="classtidas_1_1group_1a5e62d505cd1427d65b967cdda4831e87"></span>void <code class="descname">relocate</code><span class="sig-paren">(</span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group8relocateER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Change the location of the group. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group4syncEv">
-<span id="tidas::group::sync"></span><span class="target" id="TIDASclasstidas_1_1group_1ab9cac4303a52c061885bd218fe551e8b"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group4syncEv" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::sync"></span><span class="target" id="classtidas_1_1group_1ab9cac4303a52c061885bd218fe551e8b"></span>void <code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group4syncEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Reload metadata from the current location, overwriting the current state in memory. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group5flushEv">
-<span id="tidas::group::flush"></span><span class="target" id="TIDASclasstidas_1_1group_1a94a352b401974f9a0839e03117e0ebe7"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group5flushEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group5flushEv">
+<span id="tidas::group::flushC"></span><span class="target" id="classtidas_1_1group_1afe706971aa55f4c2f627d9e1f7661a5a"></span>void <code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group5flushEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Write metadata to the current location, overwriting the information at that location. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group4copyER5groupRNSt6stringER12backend_path">
-<span id="tidas::group::copy__groupCR.ssCR.backend_pathCR"></span><span class="target" id="TIDASclasstidas_1_1group_1a07453c6e5c942a0802f2c7b3bd8f48d5"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group4copyER5groupRNSt6stringER12backend_path" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::copy__groupCR.ssCR.backend_pathCR"></span><span class="target" id="classtidas_1_1group_1a07453c6e5c942a0802f2c7b3bd8f48d5"></span>void <code class="descname">copy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5tidas5groupE" title="tidas::group">group</a> <em class="property">const</em> &amp;<em>other</em>, std::string <em class="property">const</em> &amp;<em>filter</em>, <a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <em class="property">const</em> &amp;<em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group4copyER5groupRNSt6stringER12backend_path" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Copy with optional selection and relocation. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group4linkER9link_typeRNSt6stringE">
-<span id="tidas::group::link__link_typeCR.ssCR"></span><span class="target" id="TIDASclasstidas_1_1group_1a4ae2a83cc620e5df86d0c5686fecd426"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group4linkER9link_typeRNSt6stringE">
+<span id="tidas::group::link__link_typeCR.ssCRC"></span><span class="target" id="classtidas_1_1group_1a5cc623379256df50531e5765c068eb12"></span>void <code class="descname">link</code><span class="sig-paren">(</span>link_type <em class="property">const</em> &amp;<em>type</em>, std::string <em class="property">const</em> &amp;<em>path</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group4linkER9link_typeRNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Create a link at the specified location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group4wipeEv">
-<span id="tidas::group::wipe"></span><span class="target" id="TIDASclasstidas_1_1group_1ab0581bf25d95f3f097997d82f2b7b3ff"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group4wipeEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group4wipeEv">
+<span id="tidas::group::wipeC"></span><span class="target" id="classtidas_1_1group_1a97668454c0a5082ebcb71fbb3b511745"></span>void <code class="descname">wipe</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group4wipeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) Delete the on-disk data and metadata associated with this object. </p>
 <p>In-memory metadata is not modified. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group8locationEv">
-<span id="tidas::group::location"></span><span class="target" id="TIDASclasstidas_1_1group_1a4ef54a76b7ef62638ba15270cb73bc12"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group8locationEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group8locationEv">
+<span id="tidas::group::locationC"></span><span class="target" id="classtidas_1_1group_1ac7906f2f1dda7d15befe6629f3c2214d"></span><a class="reference internal" href="dev.html#_CPPv2N5tidas12backend_pathE" title="tidas::backend_path">backend_path</a> <code class="descname">location</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group8locationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(<strong>Internal</strong>) The current location. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group10dictionaryEv">
-<span id="tidas::group::dictionary"></span><span class="target" id="TIDASclasstidas_1_1group_1a85895e82d13ca78db6e44a14bcdc8f4d"></span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<code class="descname">dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10dictionaryEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10dictionaryEv">
+<span id="tidas::group::dictionaryC"></span><span class="target" id="classtidas_1_1group_1a29ebf53a0ccfcc003318a4fadeb6f403"></span><a class="reference internal" href="utils.html#_CPPv2N5tidas4dictE" title="tidas::dict">dict</a> <em class="property">const</em> &amp;<code class="descname">dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10dictionaryEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A (const) reference to the dictionary specified at construction. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group10schema_getEv">
-<span id="tidas::group::schema_get"></span><span class="target" id="TIDASclasstidas_1_1group_1a09e7f0515c2e0300e2f9e4e368848e9c"></span>schema <em class="property">const</em> &amp;<code class="descname">schema_get</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10schema_getEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10schema_getEv">
+<span id="tidas::group::schema_getC"></span><span class="target" id="classtidas_1_1group_1a709082322d8861b53a00095c1203b725"></span>schema <em class="property">const</em> &amp;<code class="descname">schema_get</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10schema_getEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The fixed schema specified at construction. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group4sizeEv">
-<span id="tidas::group::size"></span><span class="target" id="TIDASclasstidas_1_1group_1abb68f9ccbac3f1415556b6fab3a7ed35"></span>index_type <code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group4sizeEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group4sizeEv">
+<span id="tidas::group::sizeC"></span><span class="target" id="classtidas_1_1group_1af0508bbed9590e3a6f59a065d9a4eba7"></span>index_type <code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The number of samples currently in the group. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group6resizeER10index_type">
-<span id="tidas::group::resize__index_typeCR"></span><span class="target" id="TIDASclasstidas_1_1group_1ad2f3746a1c8de0c3dee8df19adf69425"></span>void <code class="descname">resize</code><span class="sig-paren">(</span>index_type <em class="property">const</em> &amp;<em>newsize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group6resizeER10index_type" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::resize__index_typeCR"></span><span class="target" id="classtidas_1_1group_1ad2f3746a1c8de0c3dee8df19adf69425"></span>void <code class="descname">resize</code><span class="sig-paren">(</span>index_type <em class="property">const</em> &amp;<em>newsize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group6resizeER10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Change the number of samples in the group. </p>
 <p>Depending on the backend format, this may involve expensive disk operations. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group5rangeER9time_typeR9time_type">
-<span id="tidas::group::range__time_typeR.time_typeR"></span><span class="target" id="TIDASclasstidas_1_1group_1a269854b5e9c825e2e14454276984421c"></span>void <code class="descname">range</code><span class="sig-paren">(</span>time_type &amp;<em>start</em>, time_type &amp;<em>stop</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group5rangeER9time_typeR9time_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group5rangeER9time_typeR9time_type">
+<span id="tidas::group::range__time_typeR.time_typeRC"></span><span class="target" id="classtidas_1_1group_1a20dd49df0d6f13d6711f9f855968c194"></span>void <code class="descname">range</code><span class="sig-paren">(</span>time_type &amp;<em>start</em>, time_type &amp;<em>stop</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group5rangeER9time_typeR9time_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The extrema values of the timestamp field. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5tidas5group12update_rangeEv">
+<span id="tidas::group::update_range"></span><span class="target" id="classtidas_1_1group_1a638521a3bd3d7974f2921aefa1624ad5"></span>void <code class="descname">update_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group12update_rangeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Explicitly check timestamps and update group metadata. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
-<dt id="_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_type10index_typeP1T">
-<span id="tidas::group::read_field__ssCR.index_type.index_type.TP"></span><span class="target" id="TIDASclasstidas_1_1group_1aa225f134d9097171122c29ed7eddb4b3"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, T *<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_type10index_typeP1T" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_type10index_typeP1T">
+<span id="tidas::group::read_field__ssCR.index_type.index_type.TPC"></span><span class="target" id="classtidas_1_1group_1a6116087f2e7e221a17186c470a2f34c6"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, T *<em>data</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_type10index_typeP1T" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read a range of data from a field. </p>
 <p>Store results to the bare memory address specified. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK5tidas5group17read_field_astypeERNSt6stringE10index_type10index_typeN5tidas9data_typeEPv">
+<span id="tidas::group::read_field_astype__ssCR.index_type.index_type.tidas::data_type.voidPC"></span><span class="target" id="classtidas_1_1group_1aeba9cc78a1f0d0714ec9e08bc9e8b01d"></span>void <code class="descname">read_field_astype</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, tidas::<a class="reference internal" href="dev.html#_CPPv2N5tidas9data_typeE" title="tidas::data_type">data_type</a> <em>type</em>, void *<em>data</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group17read_field_astypeERNSt6stringE10index_type10index_typeN5tidas9data_typeEPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read a range of data from a field. </p>
+<p>Store results to the bare memory address specified. Rather than use templates, this casts the data pointer based on the tidas type. </p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
 <dt id="_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_type10index_typeP1T">
-<span id="tidas::group::write_field__ssCR.index_type.index_type.TCP"></span><span class="target" id="TIDASclasstidas_1_1group_1a5ffb02ff9416a1012a1f934d5ae34529"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, T <em class="property">const</em> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_type10index_typeP1T" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::write_field__ssCR.index_type.index_type.TCP"></span><span class="target" id="classtidas_1_1group_1a5ffb02ff9416a1012a1f934d5ae34529"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, T <em class="property">const</em> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_type10index_typeP1T" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write a range of data to a field. </p>
 <p>Data is provided at the bare memory address specified. </p>
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N5tidas5group18write_field_astypeERNSt6stringE10index_type10index_typeN5tidas9data_typeEPv">
+<span id="tidas::group::write_field_astype__ssCR.index_type.index_type.tidas::data_type.voidCP"></span><span class="target" id="classtidas_1_1group_1a8884ce86a920f70410eaa861014302d5"></span>void <code class="descname">write_field_astype</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, tidas::<a class="reference internal" href="dev.html#_CPPv2N5tidas9data_typeE" title="tidas::data_type">data_type</a> <em>type</em>, void <em class="property">const</em> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group18write_field_astypeERNSt6stringE10index_type10index_typeN5tidas9data_typeEPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a range of data to a field. </p>
+<p>Data is provided at the bare memory address specified. Rather than use templates, this casts the data pointer based on the tidas type. </p>
+</dd></dl>
+
+<dl class="function">
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
-<dt id="_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE">
-<span id="tidas::group::read_field__ssCR.index_type.std::vector:T:R"></span><span class="target" id="TIDASclasstidas_1_1group_1a927eecc65f795e90b5888061bb7dffab"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;T&gt; &amp;<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE">
+<span id="tidas::group::read_field__ssCR.index_type.std::vector:T:RC"></span><span class="target" id="classtidas_1_1group_1a031afd7827e46fcc4d9d9968d63987cf"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;T&gt; &amp;<em>data</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read a range of data from a field. </p>
 <p>Store results in the given vector. </p>
 </dd></dl>
@@ -383,238 +295,60 @@ for the field type.</p>
 <dt>
 <em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
 <dt id="_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE">
-<span id="tidas::group::write_field__ssCR.index_type.std::vector:T:CR"></span><span class="target" id="TIDASclasstidas_1_1group_1a0739fe5a78ca4ea543e33c0f19012ff1"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;T&gt; <em class="property">const</em> &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::write_field__ssCR.index_type.std::vector:T:CR"></span><span class="target" id="classtidas_1_1group_1a0739fe5a78ca4ea543e33c0f19012ff1"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;T&gt; <em class="property">const</em> &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorI1TEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write a range of data to a field. </p>
 <p>Data is provided as a vector. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_type10index_typePPc">
-<span id="tidas::group::read_field__ssCR.index_type.index_type.cPP"></span><span class="target" id="TIDASclasstidas_1_1group_1ae0980075c097d3fdd922713af574529b"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, char **<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_type10index_typePPc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a range of string data from a field. </p>
-<p>Store results in in an array of pointers. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_type10index_typePPCc">
-<span id="tidas::group::write_field__ssCR.index_type.index_type.cPCP"></span><span class="target" id="TIDASclasstidas_1_1group_1ae6612e80fe6d4569de69658ff72e85ca"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, index_type <em>ndata</em>, char *<em class="property">const</em> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_type10index_typePPCc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a range of string data to a field. </p>
-<p>Data is provided at the bare memory address specified. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE">
-<span id="tidas::group::read_field__ssCR.index_type.std::vector:ss:R"></span><span class="target" id="TIDASclasstidas_1_1group_1acefdb9d50a93e114940f1b05cfa09b56"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;std::string&gt; &amp;<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE">
+<span id="tidas::group::read_field__ssCR.index_type.std::vector:ss:RC"></span><span class="target" id="classtidas_1_1group_1a84d657a99c6983bf10eca9358936a39c"></span>void <code class="descname">read_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;std::string&gt; &amp;<em>data</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10read_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read a range of string data from a field. </p>
 <p>Store results in in a vector of strings. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE">
-<span id="tidas::group::write_field__ssCR.index_type.std::vector:ss:CR"></span><span class="target" id="TIDASclasstidas_1_1group_1a7a3234490fa3baf8949a84efb367e1b8"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;std::string&gt; <em class="property">const</em> &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a></dt>
+<span id="tidas::group::write_field__ssCR.index_type.std::vector:ss:CR"></span><span class="target" id="classtidas_1_1group_1a7a3234490fa3baf8949a84efb367e1b8"></span>void <code class="descname">write_field</code><span class="sig-paren">(</span>std::string <em class="property">const</em> &amp;<em>field_name</em>, index_type <em>offset</em>, std::vector&lt;std::string&gt; <em class="property">const</em> &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_fieldERNSt6stringE10index_typeRNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write a range of string data to a field. </p>
 <p>Data is provided as a vector of strings. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group10read_timesE10index_typeP9time_type">
-<span id="tidas::group::read_times__index_type.time_typeP"></span><span class="target" id="TIDASclasstidas_1_1group_1a29d8bc2c43c14ac8d3f28711e6f397a1"></span>void <code class="descname">read_times</code><span class="sig-paren">(</span>index_type <em>ndata</em>, time_type *<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_timesE10index_typeP9time_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10read_timesE10index_typeP9time_type10index_type">
+<span id="tidas::group::read_times__index_type.time_typeP.index_typeC"></span><span class="target" id="classtidas_1_1group_1a2388528ef93f8be30e9bbfd174a1093d"></span>void <code class="descname">read_times</code><span class="sig-paren">(</span>index_type <em>ndata</em>, time_type *<em>data</em>, index_type <em>offset</em> = 0<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10read_timesE10index_typeP9time_type10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read the timestamps for this group. </p>
 <p>Data is stored in the bare memory address provided. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group10read_timesERNSt6vectorI9time_typeEE">
-<span id="tidas::group::read_times__std::vector:time_type:R"></span><span class="target" id="TIDASclasstidas_1_1group_1a832f4dd67d1e797d79e49b2882ad973e"></span>void <code class="descname">read_times</code><span class="sig-paren">(</span>std::vector&lt;time_type&gt; &amp;<em>data</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N5tidas5group10read_timesERNSt6vectorI9time_typeEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK5tidas5group10read_timesERNSt6vectorI9time_typeEE10index_type">
+<span id="tidas::group::read_times__std::vector:time_type:R.index_typeC"></span><span class="target" id="classtidas_1_1group_1a2fa7a184e49318b2aef236ca8bb05c2d"></span>void <code class="descname">read_times</code><span class="sig-paren">(</span>std::vector&lt;time_type&gt; &amp;<em>data</em>, index_type <em>offset</em> = 0<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group10read_timesERNSt6vectorI9time_typeEE10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read the timestamps for this group. </p>
 <p>Data is stored in the vector provided. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group11write_timesE10index_typeP9time_type">
-<span id="tidas::group::write_times__index_type.time_typeCP"></span><span class="target" id="TIDASclasstidas_1_1group_1acc7cd30b9947a2a38ea6b736f23b125a"></span>void <code class="descname">write_times</code><span class="sig-paren">(</span>index_type <em>ndata</em>, time_type <em class="property">const</em> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_timesE10index_typeP9time_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N5tidas5group11write_timesE10index_typeP9time_type10index_type">
+<span id="tidas::group::write_times__index_type.time_typeCP.index_type"></span><span class="target" id="classtidas_1_1group_1a5bbdace696aedae9650376d417b3eb50"></span>void <code class="descname">write_times</code><span class="sig-paren">(</span>index_type <em>ndata</em>, time_type <em class="property">const</em> *<em>data</em>, index_type <em>offset</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_timesE10index_typeP9time_type10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write the timestamps for this group. </p>
 <p>Data is provided at the bare memory address specified. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N5tidas5group11write_timesERNSt6vectorI9time_typeEE">
-<span id="tidas::group::write_times__std::vector:time_type:CR"></span><span class="target" id="TIDASclasstidas_1_1group_1a304d5753620c3a10821bf5de9fad9f30"></span>void <code class="descname">write_times</code><span class="sig-paren">(</span>std::vector&lt;time_type&gt; <em class="property">const</em> &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_timesERNSt6vectorI9time_typeEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N5tidas5group11write_timesERNSt6vectorI9time_typeEE10index_type">
+<span id="tidas::group::write_times__std::vector:time_type:CR.index_type"></span><span class="target" id="classtidas_1_1group_1a751b83966d02e7ef8a04764da3b82cf1"></span>void <code class="descname">write_times</code><span class="sig-paren">(</span>std::vector&lt;time_type&gt; <em class="property">const</em> &amp;<em>data</em>, index_type <em>offset</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5tidas5group11write_timesERNSt6vectorI9time_typeEE10index_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write the timestamps for this group. </p>
 <p>Data is provided as a vector. </p>
 </dd></dl>
 
-</div>
-<dl class="class">
-<dt id="_CPPv2N5tidas5group5GroupE">
-<span id="tidas::group::Group"></span><span class="target" id="TIDASclasstidas_1_1group_1_1_group"></span><em class="property">class </em><code class="descname">Group</code><a class="headerlink" href="#_CPPv2N5tidas5group5GroupE" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">which</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">TIDAS</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">schema</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="n">fields</span> <span class="ow">and</span> <span class="n">their</span> <span class="n">types</span> <span class="ow">and</span> <span class="n">units</span> <span class="n">to</span>
-        <span class="n">create</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>  <span class="n">Example</span><span class="p">:</span>
-        <span class="p">{</span> <span class="s2">&quot;field1&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;uint16&quot;</span><span class="p">,</span> <span class="s2">&quot;counts&quot;</span><span class="p">),</span> 
-        <span class="s2">&quot;field2&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="s2">&quot;volts&quot;</span><span class="p">)</span> <span class="p">}</span>
-    <span class="n">size</span> <span class="p">(</span><span class="n">long</span><span class="p">):</span>   <span class="n">number</span> <span class="n">of</span> <span class="n">samples</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-    <span class="n">props</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span>  <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">associate</span>
-        <span class="k">with</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-<p>Inherits from object</p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="tidas.group.Group.close">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1aae2c0270d20f79420f7e5c2b36690883"></span><code class="descname">close</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.close" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Explicitly</span> <span class="n">close</span> <span class="n">the</span> <span class="n">group</span> <span class="p">(</span><span class="n">free</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span><span class="p">)</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.props">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a0d873fdc4c16ed536bb312e39333054d"></span><code class="descname">props</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.props" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">dictionary</span> <span class="n">of</span> <span class="n">properties</span> <span class="nb">set</span> <span class="n">at</span> <span class="n">construction</span> <span class="n">time</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.schema">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a4e7a2573551047439c2a1c4a98df5111"></span><code class="descname">schema</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.schema" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">schema</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>  <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">keyed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">field</span>
-<span class="n">names</span> <span class="n">whose</span> <span class="n">values</span> <span class="n">are</span> <span class="n">a</span> <span class="mi">2</span><span class="o">-</span><span class="nb">tuple</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">datatype</span> <span class="ow">and</span> <span class="n">units</span>
-<span class="n">of</span> <span class="n">the</span> <span class="n">field</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.size">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a1b38b9e0c3fe3f65f5190e97e585321e"></span><code class="descname">size</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.size" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">samples</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.resize">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1ab74dc1b72922e16f8cc3c92a3a476ce8"></span><code class="descname">resize</code><span class="sig-paren">(</span><em>self self</em>, <em>newsize newsize</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.resize" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Change</span> <span class="n">the</span> <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">will</span> <span class="n">resize</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">on</span><span class="o">-</span><span class="n">disk</span> <span class="n">storage</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">be</span> <span class="n">expensive</span><span class="p">,</span>
-<span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">details</span> <span class="n">of</span> <span class="n">the</span> <span class="n">backend</span> <span class="nb">format</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">newsize</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">the</span> <span class="n">new</span> <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.range">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a7cc9cac03a6955a3c4e27b68a5052106"></span><code class="descname">range</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.range" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">start</span> <span class="o">/</span> <span class="n">stop</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span><span class="s1">&#39;s time field.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">start</span> <span class="ow">and</span> <span class="n">stop</span> <span class="n">times</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.read_times">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a520cfcc9ed3ea28240bb7e5cc48c1b03"></span><code class="descname">read_times</code><span class="sig-paren">(</span><em>self self</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.read_times" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Read</span> <span class="n">the</span> <span class="n">full</span> <span class="n">time</span> <span class="n">vector</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">reads</span> <span class="n">the</span> <span class="n">full</span> <span class="n">timestamps</span> <span class="k">for</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">array</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">timestamps</span> <span class="k">as</span> <span class="n">a</span> <span class="n">numpy</span> <span class="n">float64</span> <span class="n">array</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.write_times">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a8b4736d893ccadf4bbabd795c5b19c3c"></span><code class="descname">write_times</code><span class="sig-paren">(</span><em>self self</em>, <em>data data</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.write_times" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">the</span> <span class="n">full</span> <span class="n">time</span> <span class="n">vector</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="n">writes</span> <span class="n">the</span> <span class="n">full</span> <span class="n">timestamps</span> <span class="k">for</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">data</span> <span class="p">(</span><span class="n">array</span><span class="p">):</span> <span class="n">the</span> <span class="n">timestamps</span> <span class="k">as</span> <span class="n">a</span> <span class="n">numpy</span> <span class="n">float64</span> <span class="n">array</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.read">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1aed71ac567836f95b9e8b881ed66adf7d"></span><code class="descname">read</code><span class="sig-paren">(</span><em>self self</em>, <em>field field</em>, <em>offset offset</em>, <em>ndata ndata</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.read" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Read</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">specified</span> <span class="n">field</span><span class="o">.</span>
-
-<span class="n">Data</span> <span class="ow">is</span> <span class="n">read</span> <span class="k">for</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">sample</span> <span class="nb">range</span> <span class="ow">and</span> <span class="n">returned</span> <span class="k">as</span> <span class="n">a</span>
-<span class="n">numpy</span> <span class="n">array</span> <span class="k">with</span> <span class="n">a</span> <span class="n">dtype</span> <span class="n">that</span> <span class="n">matches</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">data</span> <span class="nb">type</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">field</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">field</span> <span class="n">to</span> <span class="n">read</span><span class="o">.</span>
-    <span class="n">offset</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">the</span> <span class="n">first</span> <span class="n">sample</span> <span class="n">to</span> <span class="n">read</span><span class="o">.</span>
-    <span class="n">ndata</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">samples</span> <span class="n">to</span> <span class="n">read</span><span class="o">.</span>
-
-<span class="n">Returns</span> <span class="p">(</span><span class="n">array</span><span class="p">):</span>
-    <span class="n">the</span> <span class="n">data</span> <span class="k">for</span> <span class="n">the</span> <span class="n">field</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.write">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a19ec1128f871820cfb1e12ca08096b40"></span><code class="descname">write</code><span class="sig-paren">(</span><em>self self</em>, <em>field field</em>, <em>offset offset</em>, <em>data data</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.write" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">data</span> <span class="n">to</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">field</span><span class="o">.</span>
-
-<span class="n">Data</span> <span class="ow">is</span> <span class="n">written</span> <span class="k">for</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">sample</span> <span class="nb">range</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">provided</span> <span class="n">numpy</span>
-<span class="n">array</span> <span class="n">must</span> <span class="n">have</span> <span class="n">a</span> <span class="n">dtype</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">compatible</span> <span class="k">with</span> <span class="n">the</span> <span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">interface</span>
-<span class="k">for</span> <span class="n">the</span> <span class="n">field</span> <span class="nb">type</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">field</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">field</span> <span class="n">to</span> <span class="n">write</span><span class="o">.</span>
-    <span class="n">offset</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">the</span> <span class="n">first</span> <span class="n">sample</span> <span class="n">to</span> <span class="n">write</span><span class="o">.</span>
-    <span class="n">data</span> <span class="p">(</span><span class="n">array</span><span class="p">):</span> <span class="n">the</span> <span class="n">data</span> <span class="n">to</span> <span class="n">write</span>
-
-<span class="n">Returns</span><span class="p">:</span>
-    <span class="n">Nothing</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tidas.group.Group.info">
-<span class="target" id="TIDASclasstidas_1_1group_1_1_group_1a211059b9aebde94f5c9135e7b4eec52c"></span><code class="descname">info</code><span class="sig-paren">(</span><em>self self</em>, <em>name name</em>, <em>indent indent = 2</em><span class="sig-paren">)</span><a class="headerlink" href="#tidas.group.Group.info" title="Permalink to this definition">¶</a></dt>
-<dd><p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Print</span> <span class="n">basic</span> <span class="n">information</span> <span class="n">about</span> <span class="n">this</span> <span class="n">group</span> <span class="n">to</span> <span class="n">stdout</span><span class="o">.</span>
-
-<span class="n">Mainly</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">debugging</span><span class="o">.</span>
-
-<span class="n">Args</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">this</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">parent</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
+<dt id="_CPPv2NK5tidas5group4infoERNSt7ostreamE6size_t">
+<span id="tidas::group::info__osR.sC"></span><span class="target" id="classtidas_1_1group_1a5f7ff44d4389f53495130a001592ad35"></span>void <code class="descname">info</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em>, size_t <em>indent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK5tidas5group4infoERNSt7ostreamE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print information to a stream. </p>
 </dd></dl>
 
 </div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -636,7 +370,7 @@ for the field type.</p>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2017, Theodore Kisner.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
     </div>
   </body>
 </html>
